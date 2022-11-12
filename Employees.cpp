@@ -3,7 +3,9 @@
 using namespace std;
 
 static int ID=0;
+class Bros{
 
+};
 class Date{
 public:
     int date;
