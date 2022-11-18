@@ -1,10 +1,59 @@
-#pragma once
+//#pragma once
 #include <iostream>
 using namespace std;
 
 static int ID=0;
-class Bros{
-
+class node
+{
+    public:
+    node *left;
+    node *right;
+    node *middle;
+    string position;
+    node()
+    {
+        left=NULL;
+        right=NULL;
+        middle=NULL;
+        position = "";
+    }
+    node(string position="Cheif Executive Officer")
+    {
+        this->position=position;
+        left=NULL;
+        right=NULL;
+        middle=NULL;
+    }
+};
+class Hierarchy{
+    public:
+    void insert(node *head)
+    {
+        head->left=new node("Cheif Technological Officer");
+        head->middle=new node("Managing Director");
+        head->right=new node("Head of Operations");
+    }
+   
+    
+    void printHierarchy(node *head)
+    {
+        static int i=0;
+        if(head==NULL)
+        {
+            return;
+        }
+        if(i==0)
+        {
+        cout<<"\t\t"<<head->position<<"\t\t"<<endl;
+        i++;
+        }
+        else{
+        cout<<head->position<<"  ";
+        }
+        printHierarchy(head->left);
+        printHierarchy(head->middle);
+        printHierarchy(head->right);
+    }
 };
 class Date{
 public:
@@ -54,4 +103,11 @@ Employee::Employee(){
     bonus= 1.1;         //10%
     department= "Not Assigned";
     superior= "Not Assigned";
+}
+int main()
+{
+    node *CEO=new node("Cheif Executive Officer");
+    Hierarchy company;
+    company.insert(CEO);
+     company.printHierarchy(CEO);
 }
