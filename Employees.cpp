@@ -87,14 +87,35 @@ public:
     string getSuperior();
     
     //Setters
-    void setName(string name);
-    void setID(int id);
-    void setDate(Date date);
-    void setSalary(int salary);
-    void setBonus(float bonus); 
-    void setDeparment(string department);
+    void setName(string name)
+    {
+        this->name=name;
+    }
+    void setID(int id)
+    {
+        this->id=id;
+    }
+    void setDate(Date date)
+    {
+        dateJoined=date;
+    }
+    void setSalary(int salary)
+    {
+        this->salary=salary;
+    }
+    void setBonus(float bonus);
+    void setDeparment(string department)
+    {
+        this->department=department;
+    }
     void setSuperior(string superior);
-
+    void Display()
+    {
+        cout<<name<<endl;
+        cout<<id<<endl;
+        cout<<department<<endl;
+        cout<<salary<<endl;
+    }
 };
 Employee::Employee(){
     name="";
@@ -104,10 +125,81 @@ Employee::Employee(){
     department= "Not Assigned";
     superior= "Not Assigned";
 }
+class list{
+    public:
+    Employee obj;
+    list *next;
+    list *prev;
+    list()
+    {
+        next=NULL;
+        prev=NULL;
+    }
+    list(Employee &ob)
+    {
+        next=NULL;
+        prev=NULL;
+        obj.setName(ob.getName());
+        obj.setID(ob.getId());
+        obj.setDate(ob.getDate());
+        obj.setSalary(ob.getSalary());
+        obj.setBonus(ob.getBonus());
+        obj.setDeparment(ob.getDeparment());
+        obj.setSuperior(ob.getSuperior());
+
+    }
+};
+    class doubllylinklist{
+        public:
+        list *head;
+        list *tail;
+        doubllylinklist()
+        {
+            head=NULL;
+            tail=NULL;
+        }
+        void insert(Employee &obj)
+        {
+            list *temp=new list(obj);
+            if(head==NULL)
+            {
+                head=temp;
+                tail=temp;
+                return;
+            }
+            list *curr=head;
+            while(curr->next!=NULL)
+            {
+                curr=curr->next;
+            }
+            curr->next=temp;
+            temp->prev=curr;
+            tail=temp;
+        }
+        void Display()
+        {
+            list*curr=head;
+            while(curr!=NULL)
+            {
+                curr->obj.Display();
+                curr=curr->next;
+            }
+        }
+    };
 int main()
 {
     node *CEO=new node("Cheif Executive Officer");
     Hierarchy company;
     company.insert(CEO);
      company.printHierarchy(CEO);
+     Employee obj;
+     obj.setName("Muhammad Rehan Khan");
+     obj.setID(3172);
+     obj.setDeparment("CEO");
+     obj.setSalary(1000000);
+     doubllylinklist ob;
+     ob.insert(obj);
+     ob.Display();
+
+
 }
