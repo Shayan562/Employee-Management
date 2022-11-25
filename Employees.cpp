@@ -78,13 +78,34 @@ public:
     Employee();
 
     //Getter
-    string getName();
-    int getId();
-    Date getDate();
-    int getSalary();
-    float getBonus(); 
-    string getDeparment();
-    string getSuperior();
+    string getName()
+    {
+        return name;
+    }
+    int getId()
+    {
+        return id;
+    }
+    Date getDate()
+    {
+        return dateJoined;
+    }
+    int getSalary()
+    {
+        return salary;
+    }
+    float getBonus()
+    {
+        return bonus;
+    }
+    string getDeparment()
+    {
+        return department;
+    }
+    string getSuperior()
+    {
+        return superior;
+    }
     
     //Setters
     void setName(string name)
@@ -103,12 +124,18 @@ public:
     {
         this->salary=salary;
     }
-    void setBonus(float bonus);
+    void setBonus(float bonus)
+    {
+        this->bonus=bonus;
+    }
     void setDeparment(string department)
     {
         this->department=department;
     }
-    void setSuperior(string superior);
+    void setSuperior(string superior)
+    {
+        this->superior=superior;
+    }
     void Display()
     {
         cout<<name<<endl;
@@ -197,6 +224,8 @@ int main()
      obj.setID(3172);
      obj.setDeparment("CEO");
      obj.setSalary(1000000);
+     obj.setBonus(2.1);
+     obj.setSuperior(" ");
      doubllylinklist ob;
      ob.insert(obj);
      ob.Display();
