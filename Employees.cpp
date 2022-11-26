@@ -229,6 +229,12 @@ int main()
      doubllylinklist ob;
      ob.insert(obj);
      ob.Display();
+     obj.setName("Azaan Nabi Khan");
+     obj.setID(3208);
+     obj.setDeparment("CTO");
+     obj.setSalary(2000000);
+     obj.setBonus(2.1);
+     obj.setSuperior(" ");
 
 
 }
