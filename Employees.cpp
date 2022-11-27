@@ -65,6 +65,16 @@ public:
         this->month=month;
         this->year=year;
     }
+    void setDate(int d,int m,int y)
+    {
+        date=d;
+        month=m;
+        year=y;
+    }
+    void DisplayDate()
+    {
+        cout<<date<<"/"<<month<<"/"<<year;
+    }
 };
 //Date::Date(int date=1, int month=1, int year=2022):date(date),month(month),year(){}
 
@@ -120,9 +130,11 @@ public:
     {
         this->id=id;
     }
-    void setDate(Date date)
+    void setDate(Date ob)
     {
-        dateJoined=date;
+        dateJoined.date=ob.date;
+        dateJoined.month=ob.month;
+        dateJoined.year=ob.year;
     }
     void setSalary(int salary)
     {
@@ -142,10 +154,17 @@ public:
     }
     void Display()
     {
-        cout<<name<<endl;
-        cout<<id<<endl;
-        cout<<department<<endl;
-        cout<<salary<<endl;
+        cout<<"------------------------"<<endl;
+        cout<<"Name: "<<name<<endl;
+        cout<<"Identification Number: "<<id<<endl;
+        cout<<"Joining Date (dd/mm/yy): ";
+        dateJoined.DisplayDate();
+        cout<<endl;
+        cout<<"Department: "<<department<<endl;
+        cout<<"Salary: "<<salary<<endl;
+        cout<<"Bonus: "<<bonus<<endl;
+        //cout<<"------------------------"<<endl;
+
     }
 };
 Employee::Employee(){
@@ -219,6 +238,7 @@ class list{
     };
 int main()
 {
+    Date d;
     node *CEO=new node("Cheif Executive Officer");
     Hierarchy company;
     company.insert(CEO);
@@ -226,7 +246,9 @@ int main()
      Employee obj;
      obj.setName("Muhammad Rehan Khan");
      obj.setID(3172);
-     obj.setDeparment("CEO");
+     d.setDate(17,11,1994);
+     obj.setDate(d);
+     obj.setDeparment("Cheif Executive Officer");
      obj.setSalary(1000000);
      obj.setBonus(2.1);
      obj.setSuperior(" ");
@@ -237,9 +259,11 @@ int main()
 
     Employee obj1;
 
-     obj1.setName("Azaan");
+     obj1.setName("Azaan Nabi Khan");
      obj1.setID(3208);
-     obj1.setDeparment("CTO");
+     d.setDate(1,2,1996);
+     obj1.setDate(d);
+     obj1.setDeparment("Cheif Technology Officer");
      obj1.setSalary(2000000);
      obj1.setBonus(1.5);
      obj1.setSuperior(" ");
@@ -251,9 +275,11 @@ int main()
      Employee obj2;
 
 
-     obj2.setName("Shayan");
-     obj2.setID(3208);
-     obj2.setDeparment("CIO");
+     obj2.setName("Syed Shayan Hussain");
+    //  obj2.setID(3208);
+     d.setDate(9,4,1997);
+     obj2.setDate(d);
+     obj2.setDeparment("Managing Director");
      obj2.setSalary(3000000);
      obj2.setBonus(1.6);
      obj2.setSuperior(" ");
@@ -265,9 +291,11 @@ int main()
      Employee obj3;
 
 
-     obj3.setName("name 1");
-     obj3.setID(3208);
-     obj3.setDeparment("MD");
+     obj3.setName("Oliviia Robin");
+    //  obj3.setID(3208);
+     d.setDate(19,6,1999);
+     obj3.setDate(d);
+     obj3.setDeparment("Head of Operations");
      obj3.setSalary(150000);
      obj3.setBonus(1.0);
      obj3.setSuperior(" ");
@@ -277,11 +305,11 @@ int main()
      ob3.Display();
      
      Employee obj4;
-
-
-     obj4.setName("name 2");
-     obj4.setID(3208);
-     obj4.setDeparment("HO");
+     obj4.setName("Ali Ahmed");
+    //  obj4.setID(3208);
+     d.setDate(9,4,1997);
+     obj4.setDate(d);
+     obj4.setDeparment("Project Manager");
      obj4.setSalary(200000);
      obj4.setBonus(1.5);
      obj4.setSuperior(" ");
@@ -293,9 +321,11 @@ int main()
      Employee obj5;
 
 
-     obj5.setName("name 3");
-     obj5.setID(3208);
-     obj5.setDeparment("HR");
+     obj5.setName("Matt Kench");
+    //  obj5.setID(3208);
+     d.setDate(22,12,1999);
+     obj5.setDate(d);
+     obj5.setDeparment("Project Manager");
      obj5.setSalary(300000);
      obj5.setBonus(1.5);
      obj5.setSuperior(" ");
@@ -307,9 +337,11 @@ int main()
      Employee obj6;
 
 
-     obj6.setName("name 4");
-     obj6.setID(3208);
-     obj6.setDeparment("FO"); //Finance officer
+     obj6.setName("Muhammad Asad");
+    //  obj6.setID(3208);
+     d.setDate(14,3,2000);
+     obj6.setDate(d);
+     obj6.setDeparment("Project Manager"); 
      obj6.setSalary(400000);
      obj6.setBonus(1.5);
      obj6.setSuperior(" ");
@@ -321,9 +353,11 @@ int main()
      Employee obj7;
 
 
-     obj7.setName("name 6");
-     obj7.setID(3208);
-     obj7.setDeparment("AH");  //Accounting head
+     obj7.setName("Khubaib Lodhi");
+    //  obj7.setID(3208);
+     d.setDate(20,6,2000);
+     obj7.setDate(d);
+     obj7.setDeparment("Cheif Financial Officer");  
      obj7.setSalary(500000);
      obj7.setBonus(1.5);
      obj7.setSuperior(" ");
@@ -335,9 +369,11 @@ int main()
      Employee obj8;
 
 
-     obj8.setName("name 7");
-     obj8.setID(3208);
-     obj8.setDeparment("HRA"); //Human Resource Assistant 
+     obj8.setName("Syed Sana Hussain");
+    //  obj8.setID(3208);
+     d.setDate(19,10,2002);
+     obj8.setDate(d);
+     obj8.setDeparment("Finance Director");  
      obj8.setSalary(200000);
      obj8.setBonus(1.5);
      obj8.setSuperior(" ");
@@ -349,10 +385,12 @@ int main()
      Employee obj9;
 
 
-     obj9.setName("name 8");
-     obj9.setID(3208);
-     obj9.setDeparment("HRR");
-     obj9.setSalary(250000); //Human Resource Representative
+     obj9.setName("Taha Khan");
+    //  obj9.setID(3208);
+     d.setDate(30,8,2001);
+     obj9.setDate(d);
+     obj9.setDeparment("Finance Manager");
+     obj9.setSalary(250000); 
      obj9.setBonus(1.5);
      obj9.setSuperior(" ");
 
@@ -362,10 +400,12 @@ int main()
 
      Employee obj10;
 
-     obj10.setName("name 9");
-     obj10.setID(3208);
-     obj10.setDeparment("HRA");
-     obj10.setSalary(350000); //Human Resource Administrator
+     obj10.setName("Ramla Nawaz");
+    //  obj10.setID(3208);
+     d.setDate(4,4,2004);
+     obj10.setDate(d);
+     obj10.setDeparment("Human Resource Director");
+     obj10.setSalary(350000); 
      obj10.setBonus(1.5);
      obj10.setSuperior(" ");
 
@@ -375,10 +415,12 @@ int main()
 
      Employee obj11;
 
-     obj11.setName("name 10");
-     obj11.setID(3208);
-     obj11.setDeparment("HRG");
-     obj11.setSalary(250000); //Human Resource Generalist
+     obj11.setName("Maria Asrar");
+    //  obj11.setID(3208);
+     d.setDate(9,9,1999);
+     obj11.setDate(d);
+     obj11.setDeparment("Human Resource Manager");
+     obj11.setSalary(250000); 
      obj11.setBonus(1.5);
      obj11.setSuperior(" ");
 
@@ -388,10 +430,12 @@ int main()
 
      Employee obj12;
 
-     obj12.setName("name 11");
-     obj12.setID(3208);
-     obj12.setDeparment("PM");
-     obj12.setSalary(550000); //Personal Manager 
+     obj12.setName("Mustansir Molwani");
+    //  obj12.setID(3208);
+     d.setDate(11,11,2010);
+     obj12.setDate(d);
+     obj12.setDeparment("Human Resource Generalist");
+     obj12.setSalary(550000); 
      obj12.setBonus(1.5);
      obj12.setSuperior(" ");
 
@@ -401,10 +445,12 @@ int main()
 
      Employee obj13;
 
-     obj13.setName("name 12");
-     obj13.setID(3208);
-     obj13.setDeparment("HRD");
-     obj13.setSalary(850000); //Human Resource Director 
+     obj13.setName("Fahad Farooqi");
+    //  obj13.setID(3208);
+     obj13.setDeparment("Directo of Recuriting");
+     obj13.setSalary(850000);  
+     d.setDate(13,11,2001);
+     obj13.setDate(d);
      obj13.setBonus(1.5);
      obj13.setSuperior(" ");
 
