@@ -208,6 +208,65 @@ class list{
             head=NULL;
             tail=NULL;
         }
+        // int search_by_ID(int id){ //returns the node at which the id is at.
+        //     list* temp= head;
+        //         int counter=0;
+        //         while(temp!=NULL){
+        //             if(temp->obj.getId()==id){
+        //                 return counter;
+        //             }
+        //             else{
+        //                 counter++;
+        //                 temp=temp->next;
+        //             }
+        //         }
+            
+        // }
+
+        // void delete_by_id(int index){
+        //     list* curr=head;
+        //     list* prev;
+        //     int counter =0;
+        //     list* temp=head;
+        //     while(temp->next!=NULL){
+        //         counter++;
+        //         temp=temp->next;
+        //     }
+        //     if(index==0){               //if the head is to be deleted
+        //         list* temp1=head;
+        //         list* temp2=head->next;
+        //         head=temp2;
+        //         temp1->next=NULL;
+        //         temp1->prev=NULL;
+        //         delete temp;
+        //     }
+
+        //     if(index==counter){         //if the tail is to be deleted
+        //         for(int i=0;i<index;i++){
+        //         prev=curr;
+        //         curr=curr->next;
+        //        }
+        //     prev->next=NULL;
+        //     curr->next=NULL;
+        //     curr->prev=NULL;
+        //     tail=prev;
+        //     delete curr;
+        //     }
+
+        //     else{
+
+            
+        //     for(int i=0;i<index;i++){
+        //         prev=curr;
+        //         curr=curr->next;
+        //     }
+        //     prev=curr->next;
+        //     curr->next=NULL;
+        //     curr->prev=NULL;
+        //     curr->next->prev=prev;
+        //     delete curr;
+        //     }
+        // }
         void insert(Employee &obj)
         {
             list *temp=new list(obj);
@@ -458,6 +517,67 @@ int main()
      ob13.insert(obj13);
      ob13.Display();
 
+     int choice =0;
+        do{
+            cout<<"Press [1] to insert a new employee \nPress [2] to delete a employee \nPress [3] to search a employee \nPress [-1] to exit "<<endl;
+            cin>>choice;
+            switch (choice)
+            {
+            case -1:
+            break;
+            case 1:
+            {
+                string a,b;
+                int c,d,e,f;
+                float g;
+                cout<<"Please enter the data of the new employee: "<<endl;
+                 Employee obj1;
+                 Date d1;
+                 cout<<"Enter the name of the employee: ";
+                 cin>>a;
+                 obj1.setName(a);
+                cout<<"Enter the department of the employee: ";
+                cin>>b;
+                obj1.setDeparment(b);
+                cout<<"Enter the salary of the Employee: ";
+                cin>>c;
+                obj1.setSalary(c);
+                cout<<"Enter the day, month and year of joining of the employee: ";
+                cin>>d>>e>>f;  
+                d1.setDate(d,e,f);
+                obj1.setDate(d1);
+                cout<<"Enter starting bonus of the employee: ";
+                cin>>g;
+                obj1.setBonus(g);
+                obj1.setSuperior(" ");
+                doubllylinklist ob14;
+                ob14.insert(obj1);
+                ob14.Display();
+                break;
+            }
+                // case 2:
+                // {
+                //     int choice1=0;
+                //     cout<<"How do you wish to delete the employee by?"<<endl;
+                //     cout<<"Press [1] to delete by ID\nPress [2] to delete by name\n";
+                //     cin>>choice1;
+                //     switch (choice1)
+                //     {
+                //     case 1:
+                //         doubllylinklist ob1;
+                //         int id=0;
+                //         cout<<"Enter the ID to delete the employee: ";
+                //         cin>>id;
+                //         cout<<ob1.search_by_ID(id);
+
+                //         break;
+                //         }
+                //     break;
+                // }
+           
+            }
+            
+        }while (choice!=-1);
      
      
 
