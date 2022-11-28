@@ -506,7 +506,7 @@ int main()
 
      obj13.setName("Fahad Farooqi");
     //  obj13.setID(3208);
-     obj13.setDeparment("Directo of Recuriting");
+     obj13.setDeparment("Director of Recuriting");
      obj13.setSalary(850000);  
      d.setDate(13,11,2001);
      obj13.setDate(d);
