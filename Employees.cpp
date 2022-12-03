@@ -203,72 +203,91 @@ class list{
         public:
         list *head;
         list *tail;
+        
         doubllylinklist()
         {
             head=NULL;
             tail=NULL;
         }
-        // int search_by_ID(int id){ //returns the node at which the id is at.
-        //     list* temp= head;
-        //         int counter=0;
-        //         while(temp!=NULL){
-        //             if(temp->obj.getId()==id){
-        //                 return counter;
-        //             }
-        //             else{
-        //                 counter++;
-        //                 temp=temp->next;
-        //             }
-        //         }
+         int search_by_ID(int id){ //returns the node at which the id is at.
+             list* temp= head;
+                 int counter=0;
+//                 cout<<temp->obj.getId()<<endl;
+//                 temp=temp->next;
+//                  cout<<temp->obj.getId()<<endl;
+//                 temp=temp->next;
+//                  cout<<temp->obj.getId()<<endl;
+//                 temp=temp->next;
+                 while(temp!=NULL){
+                     if(temp->obj.getId()==id){
+                         return counter;
+                     }
+                     else{
+                         counter++;
+                         temp=temp->next;
+                   }
+                 }
             
-        // }
+         }
 
-        // void delete_by_id(int index){
-        //     list* curr=head;
-        //     list* prev;
-        //     int counter =0;
-        //     list* temp=head;
-        //     while(temp->next!=NULL){
-        //         counter++;
-        //         temp=temp->next;
-        //     }
-        //     if(index==0){               //if the head is to be deleted
-        //         list* temp1=head;
-        //         list* temp2=head->next;
-        //         head=temp2;
-        //         temp1->next=NULL;
-        //         temp1->prev=NULL;
-        //         delete temp;
-        //     }
+         void delete_by_id(int index){
+         	//if head node has to be deleted:
+         	
+        	if(index==0){
+        	
+    			list* temp = head;
+    			head = head->next;
+   				 delete temp;
+   			}
+   			int counter=0;
+   			list* temp=head;
+   			while(temp!=NULL){
+   				counter++;
+   				temp=temp->next;
+			   }
+			if(index==counter){
+				 list *end = head;
+    			 list *prev = NULL;
+    			while(end->next)
+    			{
+        			prev = end;
+        			end = end->next;
+    			}
+    			prev->next = NULL;
+    
 
-        //     if(index==counter){         //if the tail is to be deleted
-        //         for(int i=0;i<index;i++){
-        //         prev=curr;
-        //         curr=curr->next;
-        //        }
-        //     prev->next=NULL;
-        //     curr->next=NULL;
-        //     curr->prev=NULL;
-        //     tail=prev;
-        //     delete curr;
-        //     }
-
-        //     else{
-
-            
-        //     for(int i=0;i<index;i++){
-        //         prev=curr;
-        //         curr=curr->next;
-        //     }
-        //     prev=curr->next;
-        //     curr->next=NULL;
-        //     curr->prev=NULL;
-        //     curr->next->prev=prev;
-        //     delete curr;
-        //     }
-        // }
-        void insert(Employee &obj)
+    			 delete end;
+			}
+			
+			else{
+				 list* temp = head;
+    			 list* prev = head;
+    for(int i = 0; i < index; i++)
+    {
+        if(i == 0 && index == 1){
+		
+            head = head->next;
+            delete temp;
+        }
+        else
         {
+            if (i == index - 1 && temp)
+            {
+                prev->next = temp->next;
+                delete temp;
+            }
+            else
+            {
+                prev = temp;
+                if(prev == NULL) // position was greater than number of nodes in the list
+                    break;
+                temp = temp->next; 
+            }
+        }
+    }
+			}   
+         }
+        void insert(Employee &obj){
             list *temp=new list(obj);
             if(head==NULL)
             {
@@ -283,6 +302,7 @@ class list{
             }
             curr->next=temp;
             temp->prev=curr;
+            temp->next=NULL;
             tail=temp;
         }
         void Display()
@@ -313,7 +333,7 @@ int main()
      obj.setSuperior(" ");
      doubllylinklist ob;
      ob.insert(obj);
-     ob.Display();
+    // ob.Display();
 
 
     Employee obj1;
@@ -327,9 +347,8 @@ int main()
      obj1.setBonus(1.5);
      obj1.setSuperior(" ");
 
-     doubllylinklist ob1;
-     ob1.insert(obj1);
-     ob1.Display();
+     ob.insert(obj1);
+     //ob.Display();
 
      Employee obj2;
 
@@ -343,9 +362,9 @@ int main()
      obj2.setBonus(1.6);
      obj2.setSuperior(" ");
 
-     doubllylinklist ob2;
-     ob2.insert(obj2);
-     ob2.Display();
+     //doubllylinklist ob2;
+     ob.insert(obj2);
+     //ob.Display();
 
      Employee obj3;
 
@@ -359,9 +378,9 @@ int main()
      obj3.setBonus(1.0);
      obj3.setSuperior(" ");
 
-     doubllylinklist ob3;
-     ob3.insert(obj3);
-     ob3.Display();
+    // doubllylinklist ob3;
+     ob.insert(obj3);
+     //ob.Display();
      
      Employee obj4;
      obj4.setName("Ali Ahmed");
@@ -373,9 +392,9 @@ int main()
      obj4.setBonus(1.5);
      obj4.setSuperior(" ");
 
-     doubllylinklist ob4;
-     ob4.insert(obj4);
-     ob4.Display();
+     //doubllylinklist ob4;
+     ob.insert(obj4);
+     //ob.Display();
 
      Employee obj5;
 
@@ -389,9 +408,9 @@ int main()
      obj5.setBonus(1.5);
      obj5.setSuperior(" ");
 
-     doubllylinklist ob5;
-     ob5.insert(obj5);
-     ob5.Display();
+    // doubllylinklist ob5;
+     ob.insert(obj5);
+     //ob.Display();
 
      Employee obj6;
 
@@ -405,9 +424,9 @@ int main()
      obj6.setBonus(1.5);
      obj6.setSuperior(" ");
 
-     doubllylinklist ob6;
-     ob6.insert(obj6);
-     ob6.Display();
+     //doubllylinklist ob6;
+     ob.insert(obj6);
+     //ob.Display();
 
      Employee obj7;
 
@@ -421,9 +440,9 @@ int main()
      obj7.setBonus(1.5);
      obj7.setSuperior(" ");
 
-     doubllylinklist ob7;
-     ob7.insert(obj7);
-     ob7.Display();
+     //doubllylinklist ob7;
+     ob.insert(obj7);
+     //ob.Display();
 
      Employee obj8;
 
@@ -437,9 +456,9 @@ int main()
      obj8.setBonus(1.5);
      obj8.setSuperior(" ");
 
-     doubllylinklist ob8;
-     ob8.insert(obj8);
-     ob8.Display();
+     //doubllylinklist ob8;
+     ob.insert(obj8);
+    // ob.Display();
 
      Employee obj9;
 
@@ -453,9 +472,9 @@ int main()
      obj9.setBonus(1.5);
      obj9.setSuperior(" ");
 
-     doubllylinklist ob9;
-     ob9.insert(obj9);
-     ob9.Display();
+     //doubllylinklist ob9;
+     ob.insert(obj9);
+    // ob.Display();
 
      Employee obj10;
 
@@ -468,9 +487,9 @@ int main()
      obj10.setBonus(1.5);
      obj10.setSuperior(" ");
 
-     doubllylinklist ob10;
-     ob10.insert(obj10);
-     ob10.Display();
+    // doubllylinklist ob10;
+     ob.insert(obj10);
+     //ob.Display();
 
      Employee obj11;
 
@@ -483,9 +502,9 @@ int main()
      obj11.setBonus(1.5);
      obj11.setSuperior(" ");
 
-     doubllylinklist ob11;
-     ob11.insert(obj11);
-     ob11.Display();
+     //doubllylinklist ob11;
+     ob.insert(obj11);
+     //ob.Display();
 
      Employee obj12;
 
@@ -498,9 +517,9 @@ int main()
      obj12.setBonus(1.5);
      obj12.setSuperior(" ");
 
-     doubllylinklist ob12;
-     ob12.insert(obj12);
-     ob12.Display();
+    // doubllylinklist ob12;
+     ob.insert(obj12);
+     //ob.Display();
 
      Employee obj13;
 
@@ -513,9 +532,9 @@ int main()
      obj13.setBonus(1.5);
      obj13.setSuperior(" ");
 
-     doubllylinklist ob13;
-     ob13.insert(obj13);
-     ob13.Display();
+     //doubllylinklist ob13;
+     ob.insert(obj13);
+     ob.Display();
 
      int choice =0;
         do{
@@ -555,25 +574,32 @@ int main()
                 ob14.Display();
                 break;
             }
-                // case 2:
-                // {
-                //     int choice1=0;
-                //     cout<<"How do you wish to delete the employee by?"<<endl;
-                //     cout<<"Press [1] to delete by ID\nPress [2] to delete by name\n";
-                //     cin>>choice1;
-                //     switch (choice1)
-                //     {
-                //     case 1:
-                //         doubllylinklist ob1;
-                //         int id=0;
-                //         cout<<"Enter the ID to delete the employee: ";
-                //         cin>>id;
-                //         cout<<ob1.search_by_ID(id);
-
-                //         break;
-                //         }
-                //     break;
-                // }
+                 case 2:
+                 {
+                     int choice1=0;
+                     cout<<"How do you wish to delete the employee by?"<<endl;
+                     cout<<"Press [1] to delete by ID\nPress [2] to delete by name\n";
+                     cin>>choice1;
+                     switch (choice1)
+                     {
+                     case 1:
+                         //doubllylinklist ob1;
+                         int id=0;
+                        cout<<"Enter the ID to delete the employee: ";
+                         cin>>id;
+                         cout<<endl;
+                         cout<<"Displaying before deleting: "<<endl;
+                         ob.Display();
+                         cout<<endl;
+                         cout<<ob.search_by_ID(id);
+                         cout<<endl;
+                         ob.delete_by_id(ob.search_by_ID(id)+1);
+						cout<<"Displaying after deleting: "<<endl;
+						ob.Display();
+                         break;
+                         }
+                     break;
+                 }
            
             }
             
