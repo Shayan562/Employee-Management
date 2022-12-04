@@ -211,7 +211,7 @@ class list{
             head=NULL;
             tail=NULL;
         }
-         int search_by_ID(int id){ //returns the node at which the id is at.
+         int search_by_ID(int id){ //returns the index of the node at which the id is at.
              list* temp= head;
                  int counter=0;
 //                 cout<<temp->obj.getId()<<endl;
@@ -232,7 +232,23 @@ class list{
             return 0;
          }
 
-         void delete_by_id(int index){
+        int search_by_Name(char* a){ //returns the index of the node at which the name is at.
+                list* temp= head;
+                 int counter=0;
+
+                 while(temp!=NULL){
+                     if(temp->obj.getName()==a){
+                         return counter;
+                     }
+                     else{
+                         counter++;
+                         temp=temp->next;
+                   }
+                 }
+            return 0;
+         }
+
+         void delete_fun(int index){
          	//if head node has to be deleted:
          	
         	if(index==0){
@@ -572,20 +588,20 @@ int main()
                 cin>>g;
                 obj1.setBonus(g);
                 obj1.setSuperior(" ");
-                doubllylinklist ob14;
-                ob14.insert(obj1);
-                ob14.Display();
+               // doubllylinklist ob14;
+                ob.insert(obj1);
+                ob.Display();
                 break;
             }
                  case 2:
                  {
                      int choice1=0;
                      cout<<"How do you wish to delete the employee by?"<<endl;
-                     cout<<"Press [1] to delete by ID\nPress [2] to delete by name\n";
+                     cout<<"Press [1] to delete by ID\nPress [3] to delete by name\n";
                      cin>>choice1;
                      switch (choice1)
                      {
-                     case 1:
+                     case 1:{
                          //doubllylinklist ob1;
                          int id=0;
                         cout<<"Enter the ID to delete the employee: ";
@@ -596,10 +612,12 @@ int main()
                          cout<<endl;
                          cout<<ob.search_by_ID(id);
                          cout<<endl;
-                         ob.delete_by_id(ob.search_by_ID(id)+1);
+                         ob.delete_fun(ob.search_by_ID(id)+1);
 						cout<<"Displaying after deleting: "<<endl;
 						ob.Display();
                          break;
+                     }
+                     
                          }
                      break;
                  }
