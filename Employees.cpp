@@ -166,6 +166,7 @@ public:
         cout<<"Department: "<<department<<endl;
         cout<<"Salary: "<<salary<<endl;
         cout<<"Bonus: "<<bonus<<endl;
+        cout<<endl;
         //cout<<"------------------------"<<endl;
 
     }
@@ -346,7 +347,7 @@ class list{
             temphead=temphead->next;
         }
         cout<<endl;
-        cout<<size;
+       // cout<<size;
         list *emp=obj.head;
         Employee *arr;
         arr=new Employee[size];
@@ -356,16 +357,19 @@ class list{
             emp=emp->next;
         }
         int choice;
-        cout<<"------Sorting Data------\n";
-        cout<<"Press [1] to Sort Data accoring to Salary\n";
+        cout<<"----------Sorting Data----------\n";
+        cout<<"Press [1] to Sort Data accoring to Name \n";
+        cout<<"Press [2] to Sort Data accoring to Salary\n";
+        cout<<"Press [3] to Sort Data accoring to Age\n";
+        
         cin>>choice;
-        mergesort(arr,0,size-1);
+        mergesort(arr,0,size-1,choice);
         for(int i=0;i<size;i++)
         {
             arr[i].Display();
         }
     }
-    void merge(Employee *arr,int l,int mid,int r)
+    void merge(Employee *arr,int l,int mid,int r,int choice)
 {
     int n1=(mid-l)+1;
     int n2=r-mid;
@@ -384,6 +388,7 @@ class list{
     int k=l;
     while(n1>i && n2>j)
     {
+    if(choice==2){
         if(a[i].getSalary()>=b[j].getSalary())
         {
             arr[k]=b[j];
@@ -396,6 +401,40 @@ class list{
             i++;
             k++;
         }
+    
+    }
+    else if(choice==1)
+    {
+        if(a[i].getName()>=b[j].getName())
+        {
+            arr[k]=b[j];
+            j++;
+            k++;
+        }
+        else if(a[i].getName()<=b[j].getName())
+        {
+            arr[k]=a[i];
+            i++;
+            k++;
+        }
+
+    }
+    else
+    {
+        if(a[i].getAge()>=b[j].getAge())
+        {
+            arr[k]=b[j];
+            j++;
+            k++;
+        }
+        else if(a[i].getAge()<=b[j].getAge())
+        {
+            arr[k]=a[i];
+            i++;
+            k++;
+        }
+        
+    }
     }
     while(n1>i)
     {
@@ -410,14 +449,14 @@ class list{
         j++;
     }
 }
-    void mergesort(Employee *arr,int l,int r)
+    void mergesort(Employee *arr,int l,int r,int choice)
     {
     if(l<r)
     {
         int mid=(l+r)/2;
-        mergesort(arr,l,mid);
-        mergesort(arr,mid+1,r);
-        merge(arr,l,mid,r);
+        mergesort(arr,l,mid,choice);
+        mergesort(arr,mid+1,r,choice);
+        merge(arr,l,mid,r,choice);
     }
     }
  };
@@ -641,11 +680,9 @@ int main()
      //doubllylinklist ob13;
      ob.insert(obj13);
      //ob.Display();
-    DataSort s;
-    s.sorting(ob);
      int choice =0;
         do{
-            cout<<"Press [1] to insert a new employee \nPress [2] to delete a employee \nPress [3] to search a employee \nPress [-1] to exit "<<endl;
+            cout<<"\nPress [1] to insert a new employee \nPress [2] to delete a employee \nPress [3] to search a employee \nPress [4] for Sorting Data \nPress [-1] to exit "<<endl;
             cin>>choice;
             switch (choice)
             {
@@ -715,6 +752,11 @@ int main()
                          }
                      break;
                  }
+                 case 4:{
+                    DataSort s;
+                    s.sorting(ob);
+                 }
+                 break;
            
             }
         }while (choice!=-1);
