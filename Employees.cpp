@@ -227,7 +227,7 @@ class list{
                          temp=temp->next;
                    }
                  }
-            
+            return 0;
          }
 
          void delete_by_id(int index){
@@ -549,23 +549,23 @@ int main()
                 string a,b;
                 int c,d,e,f;
                 float g;
-                cout<<"Please enter the data of the new employee: "<<endl;
+                cout<<"\nPlease enter the data of the new employee: "<<endl;
                  Employee obj1;
                  Date d1;
-                 cout<<"Enter the name of the employee: ";
+                 cout<<"\nEnter the name of the employee: ";
                  cin>>a;
                  obj1.setName(a);
-                cout<<"Enter the department of the employee: ";
+                cout<<"\nEnter the department of the employee: ";
                 cin>>b;
                 obj1.setDeparment(b);
-                cout<<"Enter the salary of the Employee: ";
+                cout<<"\nEnter the salary of the Employee: ";
                 cin>>c;
                 obj1.setSalary(c);
-                cout<<"Enter the day, month and year of joining of the employee: ";
+                cout<<"\nEnter the day, month and year of joining of the employee: ";
                 cin>>d>>e>>f;  
                 d1.setDate(d,e,f);
                 obj1.setDate(d1);
-                cout<<"Enter starting bonus of the employee: ";
+                cout<<"\nEnter starting bonus of the employee: ";
                 cin>>g;
                 obj1.setBonus(g);
                 obj1.setSuperior(" ");
