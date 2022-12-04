@@ -88,7 +88,7 @@ protected:
     int salary;
     float bonus;
     string department;
-    string superior;
+    int age;
 
 public:
     Employee();
@@ -118,9 +118,9 @@ public:
     {
         return department;
     }
-    string getSuperior()
+    int getAge()
     {
-        return superior;
+        return age;
     }
     
     //Setters
@@ -150,14 +150,15 @@ public:
     {
         this->department=department;
     }
-    void setSuperior(string superior)
+    void setAge(int age)
     {
-        this->superior=superior;
+        this->age=age;
     }
     void Display()
     {
         cout<<"------------------------"<<endl;
         cout<<"Name: "<<name<<endl;
+        cout<<"Age: "<<age<<endl;
         cout<<"Identification Number: "<<id<<endl;
         cout<<"Joining Date (dd/mm/yy): ";
         dateJoined.DisplayDate();
@@ -175,7 +176,7 @@ Employee::Employee(){
     salary= 35000;      //base salary
     bonus= 1.1;         //10%
     department= "Not Assigned";
-    superior= "Not Assigned";
+    age= 0;
 }
 class list{
     public:
@@ -197,7 +198,7 @@ class list{
         obj.setSalary(ob.getSalary());
         obj.setBonus(ob.getBonus());
         obj.setDeparment(ob.getDeparment());
-        obj.setSuperior(ob.getSuperior());
+        obj.setAge(ob.getAge());
 
     }
 };
@@ -317,6 +318,93 @@ class list{
             }
         }
     };
+    class DataSort{
+        public:
+    void sorting(doubllylinklist &obj )
+    {
+        list *temphead=obj.head;
+        int size=0;
+        while(temphead!=NULL)
+        {
+            size++;
+            temphead=temphead->next;
+        }
+        cout<<endl;
+        cout<<size;
+        list *emp=obj.head;
+        Employee *arr;
+        arr=new Employee[size];
+        for(int i=0;i<size;i++)
+        {
+            arr[i]=emp->obj;
+            emp=emp->next;
+        }
+        int choice;
+        cout<<"------Sorting Data------\n";
+        cout<<"Press [1] to Sort Data accoring to Salary\n";
+        cin>>choice;
+        mergesort(arr,0,size-1);
+        for(int i=0;i<size;i++)
+        {
+            arr[i].Display();
+        }
+    }
+    void merge(Employee *arr,int l,int mid,int r)
+{
+    int n1=(mid-l)+1;
+    int n2=r-mid;
+    Employee a[n1];
+    Employee b[n2];
+    for(int i=0;i<n1;i++)
+    {
+        a[i]=arr[i+l];
+    }
+    for(int i=0;i<n2;i++)
+    {
+        b[i]=arr[mid+i+1];
+    }
+    int i=0;
+    int j=0;
+    int k=l;
+    while(n1>i && n2>j)
+    {
+        if(a[i].getSalary()>=b[j].getSalary())
+        {
+            arr[k]=b[j];
+            j++;
+            k++;
+        }
+        else if(a[i].getSalary()<=b[j].getSalary())
+        {
+            arr[k]=a[i];
+            i++;
+            k++;
+        }
+    }
+    while(n1>i)
+    {
+        arr[k]=a[i];
+        k++;
+        i++;
+    }
+     while(n2>j)
+    {
+        arr[k]=b[j];
+        k++;
+        j++;
+    }
+}
+    void mergesort(Employee *arr,int l,int r)
+    {
+    if(l<r)
+    {
+        int mid=(l+r)/2;
+        mergesort(arr,l,mid);
+        mergesort(arr,mid+1,r);
+        merge(arr,l,mid,r);
+    }
+    }
+ };
 int main()
 {
     Date d;
@@ -330,9 +418,9 @@ int main()
      d.setDate(17,11,1994);
      obj.setDate(d);
      obj.setDeparment("Cheif Executive Officer");
-     obj.setSalary(1000000);
+     obj.setSalary(10000000);
      obj.setBonus(2.1);
-     obj.setSuperior(" ");
+     obj.setAge(24);
      doubllylinklist ob;
      ob.insert(obj);
     // ob.Display();
@@ -347,7 +435,7 @@ int main()
      obj1.setDeparment("Cheif Technology Officer");
      obj1.setSalary(2000000);
      obj1.setBonus(1.5);
-     obj1.setSuperior(" ");
+     obj1.setAge(20);
 
      ob.insert(obj1);
      //ob.Display();
@@ -362,7 +450,7 @@ int main()
      obj2.setDeparment("Managing Director");
      obj2.setSalary(3000000);
      obj2.setBonus(1.6);
-     obj2.setSuperior(" ");
+     obj2.setAge(20);
 
      //doubllylinklist ob2;
      ob.insert(obj2);
@@ -378,7 +466,7 @@ int main()
      obj3.setDeparment("Head of Operations");
      obj3.setSalary(150000);
      obj3.setBonus(1.0);
-     obj3.setSuperior(" ");
+     obj3.setAge(29);
 
     // doubllylinklist ob3;
      ob.insert(obj3);
@@ -392,7 +480,7 @@ int main()
      obj4.setDeparment("Project Manager");
      obj4.setSalary(200000);
      obj4.setBonus(1.5);
-     obj4.setSuperior(" ");
+     obj4.setAge(28);
 
      //doubllylinklist ob4;
      ob.insert(obj4);
@@ -408,7 +496,7 @@ int main()
      obj5.setDeparment("Project Manager");
      obj5.setSalary(300000);
      obj5.setBonus(1.5);
-     obj5.setSuperior(" ");
+     obj5.setAge(31);
 
     // doubllylinklist ob5;
      ob.insert(obj5);
@@ -424,7 +512,7 @@ int main()
      obj6.setDeparment("Project Manager"); 
      obj6.setSalary(400000);
      obj6.setBonus(1.5);
-     obj6.setSuperior(" ");
+     obj6.setAge(27);
 
      //doubllylinklist ob6;
      ob.insert(obj6);
@@ -440,7 +528,7 @@ int main()
      obj7.setDeparment("Cheif Financial Officer");  
      obj7.setSalary(500000);
      obj7.setBonus(1.5);
-     obj7.setSuperior(" ");
+     obj7.setAge(33);
 
      //doubllylinklist ob7;
      ob.insert(obj7);
@@ -456,7 +544,7 @@ int main()
      obj8.setDeparment("Finance Director");  
      obj8.setSalary(200000);
      obj8.setBonus(1.5);
-     obj8.setSuperior(" ");
+     obj8.setAge(37);
 
      //doubllylinklist ob8;
      ob.insert(obj8);
@@ -472,7 +560,7 @@ int main()
      obj9.setDeparment("Finance Manager");
      obj9.setSalary(250000); 
      obj9.setBonus(1.5);
-     obj9.setSuperior(" ");
+     obj9.setAge(24);
 
      //doubllylinklist ob9;
      ob.insert(obj9);
@@ -487,7 +575,7 @@ int main()
      obj10.setDeparment("Human Resource Director");
      obj10.setSalary(350000); 
      obj10.setBonus(1.5);
-     obj10.setSuperior(" ");
+     obj10.setAge(36);
 
     // doubllylinklist ob10;
      ob.insert(obj10);
@@ -502,7 +590,7 @@ int main()
      obj11.setDeparment("Human Resource Manager");
      obj11.setSalary(250000); 
      obj11.setBonus(1.5);
-     obj11.setSuperior(" ");
+     obj11.setAge(38);
 
      //doubllylinklist ob11;
      ob.insert(obj11);
@@ -517,7 +605,7 @@ int main()
      obj12.setDeparment("Human Resource Generalist");
      obj12.setSalary(550000); 
      obj12.setBonus(1.5);
-     obj12.setSuperior(" ");
+     obj12.setAge(23);
 
     // doubllylinklist ob12;
      ob.insert(obj12);
@@ -532,12 +620,13 @@ int main()
      d.setDate(13,11,2001);
      obj13.setDate(d);
      obj13.setBonus(1.5);
-     obj13.setSuperior(" ");
+     obj13.setAge(22);
 
      //doubllylinklist ob13;
      ob.insert(obj13);
-     ob.Display();
-
+     //ob.Display();
+    DataSort s;
+    s.sorting(ob);
      int choice =0;
         do{
             cout<<"Press [1] to insert a new employee \nPress [2] to delete a employee \nPress [3] to search a employee \nPress [-1] to exit "<<endl;
@@ -549,7 +638,7 @@ int main()
             case 1:
             {
                 string a,b;
-                int c,d,e,f;
+                int c,d,e,f,age;
                 float g;
                 cout<<"\nEnter New Employee Data "<<endl;
                  Employee obj1;
@@ -558,6 +647,9 @@ int main()
                  cout<<"Enter the Name Employee: ";
                 getline(cin,a);
                  obj1.setName(a);
+                 cout<<"Enter Age of Employee: ";
+                 cin>>age;
+                 obj1.setAge(age);
                 cout<<"Enter Department: ";
                 cin>>b;
                 obj1.setDeparment(b);
@@ -571,7 +663,6 @@ int main()
                 cout<<"Enter Starting Bonus of Employee: ";
                 cin>>g;
                 obj1.setBonus(g);
-                obj1.setSuperior(" ");
                 doubllylinklist ob14;
                 ob14.insert(obj1);
                 ob14.Display();
@@ -605,9 +696,9 @@ int main()
                  }
            
             }
-            
         }while (choice!=-1);
-     
+         
+
      
 
 
