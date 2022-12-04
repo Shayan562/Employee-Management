@@ -1,5 +1,7 @@
 //#pragma once
+#include <string>
 #include <iostream>
+#include<fstream>
 using namespace std;
 
 static int ID=0;
@@ -549,23 +551,24 @@ int main()
                 string a,b;
                 int c,d,e,f;
                 float g;
-                cout<<"\nPlease enter the data of the new employee: "<<endl;
+                cout<<"\nEnter New Employee Data "<<endl;
                  Employee obj1;
                  Date d1;
-                 cout<<"\nEnter the name of the employee: ";
-                 cin>>a;
+                 fflush(stdin);
+                 cout<<"Enter the Name Employee: ";
+                getline(cin,a);
                  obj1.setName(a);
-                cout<<"\nEnter the department of the employee: ";
+                cout<<"Enter Department: ";
                 cin>>b;
                 obj1.setDeparment(b);
-                cout<<"\nEnter the salary of the Employee: ";
+                cout<<"Enter the Salary: ";
                 cin>>c;
                 obj1.setSalary(c);
-                cout<<"\nEnter the day, month and year of joining of the employee: ";
+                cout<<"Enter the Day, Month and Year of joining of the Employee: ";
                 cin>>d>>e>>f;  
                 d1.setDate(d,e,f);
                 obj1.setDate(d1);
-                cout<<"\nEnter starting bonus of the employee: ";
+                cout<<"Enter Starting Bonus of Employee: ";
                 cin>>g;
                 obj1.setBonus(g);
                 obj1.setSuperior(" ");
