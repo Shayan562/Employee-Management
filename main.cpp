@@ -4,6 +4,7 @@
 #include "Nodes.hpp"
 #include "Data Sort.hpp"
 #include "Linked List.hpp"
+#include "Hashing Table.hpp"
 using namespace std;
 
 int main()

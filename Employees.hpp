@@ -5,6 +5,7 @@
 using namespace std;
 
 static int ID = 0;
+static int totalEmployees=0;
 
 class Date
 {
@@ -124,6 +125,7 @@ public:
 };
 Employee::Employee()
 {
+    totalEmployees++;
     name = "";
     id = ++ID;
     salary = 35000; // base salary
