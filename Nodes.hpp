@@ -48,3 +48,14 @@ public:
         obj.setAge(ob.getAge());
     }
 };
+class Node{
+    public:
+    string data;
+    Node *next;
+    Node(string data)
+    {
+        this->data=data;
+        next=NULL;
+    }
+ 
+};

@@ -5,6 +5,7 @@
 #include "Data Sort.hpp"
 #include "Linked List.hpp"
 #include "Hashing Table.hpp"
+#include "Dynamic Queue.hpp"
 using namespace std;
 
 int main()
@@ -301,4 +302,14 @@ int main()
         break;
         }
     } while (choice != -1);
+    Queue complain;
+    complain.Report_Complain("Hello");
+     complain.Report_Complain("World");
+ //   cout<< complain.front->data;
+   //  cout<< complain.rear->data;
+    // complain.Report_Complain("Checking 123");
+    // complain.Dispaly_complains();
+    // complain.Resolve_Complain();
+    complain.Dispaly_complains();
+
 }
