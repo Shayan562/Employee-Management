@@ -303,12 +303,8 @@ int main()
         }
     } while (choice != -1);
     Queue complain;
-    complain.Report_Complain("Hello");
-     complain.Report_Complain("World");
- //   cout<< complain.front->data;
-   //  cout<< complain.rear->data;
-    // complain.Report_Complain("Checking 123");
-    // complain.Dispaly_complains();
+    complain.Report_Complain("Hello", ob.head->obj.getId());
+    complain.Report_Complain("World", ob.tail->obj.getId());
     // complain.Resolve_Complain();
     complain.Dispaly_complains();
 

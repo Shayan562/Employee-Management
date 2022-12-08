@@ -48,13 +48,15 @@ public:
         obj.setAge(ob.getAge());
     }
 };
-class Node{
+class NodeQue{
     public:
-    string data;
-    Node *next;
-    Node(string data)
+    string complaint;
+    int ID;
+    NodeQue *next;
+    NodeQue(string complaint, int id)
     {
-        this->data=data;
+        this->complaint=complaint;
+        this->ID=id;
         next=NULL;
     }
  

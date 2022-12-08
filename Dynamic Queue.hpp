@@ -5,25 +5,23 @@ using namespace std;
 class Queue
 {
     public:
-    Node *front;
-    Node *rear;
+    NodeQue *front;
+    NodeQue *rear;
     Queue()
     {
         front=NULL;
         rear=NULL;
     }
-    void Report_Complain(string data)
+    void Report_Complain(string data, int id)
     {
-        Node *temp=new Node(data);
+        NodeQue *temp=new NodeQue(data,id);
         if( rear==NULL)
         {
            
             front=temp;
-            front=rear;
+            rear=front;
             return;
         }
-        
-        
             rear->next=temp;
             rear=temp;
         
@@ -36,8 +34,8 @@ class Queue
         }   
         else
         {
-            Node *curr=front;
-            Node* temp = front;
+            NodeQue *curr=front;
+            NodeQue* temp = front;
             front = front->next;
  
        
@@ -50,10 +48,11 @@ class Queue
     void Dispaly_complains()
     {
         cout<<"------------------COMPLAIN LOG------------------"<<endl;
-        Node *curr=front;
-        while(curr!=rear)
+        int i=1;
+        NodeQue *curr=front;
+        while(curr!=NULL)
         {
-            cout<<". "<<curr->data<<endl;
+            cout<<i++<<". "<<curr->complaint<<" against \"ID: "<<curr->ID<<"\""<<endl;
             curr=curr->next;
            
         }
