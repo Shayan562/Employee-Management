@@ -29,6 +29,11 @@ public:
     {
         cout << date << "/" << month << "/" << year;
     }
+    void operator = (Date &obj){
+        date=obj.date;
+        month=obj.month;
+        year=obj.year;
+    }
 };
 // Date::Date(int date=1, int month=1, int year=2022):date(date),month(month),year(){}
 
@@ -121,6 +126,16 @@ public:
         cout << "Bonus: " << bonus << endl;
         cout << endl;
         // cout<<"------------------------"<<endl;
+    }
+    void operator = (Employee &emp){
+        // this.
+        name=emp.name;
+        id=emp.id;
+        dateJoined=emp.dateJoined;
+        salary=emp.salary;
+        bonus=emp.bonus;
+        department=emp.department;
+        age=emp.age;
     }
 };
 Employee::Employee()

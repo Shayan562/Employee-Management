@@ -61,3 +61,12 @@ class NodeQue{
     }
  
 };
+class NodeSingllyList{
+public:
+    Employee emp;
+    NodeSingllyList *next;
+    NodeSingllyList(Employee &emp){
+        next=NULL;
+        this->emp=emp;
+    }
+};

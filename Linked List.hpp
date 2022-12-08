@@ -148,3 +148,53 @@ public:
         }
     }
 };
+
+class SingllyList{
+public:
+    NodeSingllyList *head;
+    NodeSingllyList *tail;
+    SingllyList();
+    void insert(Employee &);
+    void remove(int);
+    void Display(); 
+    NodeSingllyList operator ++();
+ 
+};
+SingllyList::SingllyList(){
+    head=NULL;
+    tail=NULL;
+}
+void SingllyList::insert(Employee &emp){
+    NodeSingllyList *temp=new NodeSingllyList(emp);
+    if(head==NULL){
+        head=temp;
+        tail=head;
+    }
+    else{
+        head->next=temp;
+        tail=temp;
+    }
+}
+void SingllyList::remove(int id){
+    NodeSingllyList *curr=head;
+    if(head==NULL){
+        return;
+    }
+    while(curr->next->emp.getId()!=id && curr->next!=NULL){
+        curr=curr->next;
+    }
+    if(curr==NULL){
+        return;
+    }
+    NodeSingllyList *del=curr->next;
+    curr->next=curr->next->next;
+    delete del;
+}
+
+void SingllyList::Display(){
+    NodeSingllyList *curr=head;
+    while(curr!=NULL){
+        curr->emp.Display();
+        curr=curr->next;
+    }
+}
