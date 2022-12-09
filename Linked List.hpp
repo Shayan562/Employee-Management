@@ -157,7 +157,6 @@ public:
     void insert(Employee &);
     void remove(int);
     void Display(); 
-    NodeSingllyList operator ++();
  
 };
 SingllyList::SingllyList(){
@@ -171,7 +170,7 @@ void SingllyList::insert(Employee &emp){
         tail=head;
     }
     else{
-        head->next=temp;
+        tail->next=temp;
         tail=temp;
     }
 }
