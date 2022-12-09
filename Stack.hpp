@@ -1,5 +1,7 @@
+#pragma once
 #include<iostream>
 #include"Linked List.hpp"
+using namespace std;
 class Stack{
     public:
     string arr[10];
@@ -22,8 +24,16 @@ class Stack{
         if(top==-1)
         {
             cout<<"Stack UnderFlow"<<endl;
-            return ;
+            return "";
         }
          return arr[top--];
+    }
+    bool isEmpty()
+    {
+        if(top==-1)
+        {
+            return true;
+        }
+        return false;
     }
 };

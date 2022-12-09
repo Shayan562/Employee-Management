@@ -73,7 +73,7 @@ public:
 };
 class NodeBST{
 public:
-    SingllyList list;
+    //SingllyList list;
     NodeBST *left;
     NodeBST *right;
     int numOfEmployees;

@@ -85,6 +85,7 @@ public:
     void setName(string name)
     {
         this->name = name;
+        this->name+=" ";
     }
     void setID(int id)
     {
