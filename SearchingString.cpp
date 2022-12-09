@@ -47,12 +47,13 @@ class string_search{
                 cin>>choice;
                 if(choice==1)
                 {
-                    ob.Display();
-                    exit(0);
+                    curr->obj.Display();
+                    return;
                 }
 
             }
             }
+            
             curr=curr->next;
             
     }
