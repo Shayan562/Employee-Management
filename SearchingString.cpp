@@ -34,6 +34,7 @@ class string_search{
 
                 }
             }
+            s.Push(temp);
             while(!s.isEmpty())
             {
             cmp=s.pop();
@@ -47,15 +48,16 @@ class string_search{
                 if(choice==1)
                 {
                     ob.Display();
-                    break;
+                    exit(0);
                 }
 
             }
             }
             curr=curr->next;
-    
+            
     }
-    if(choice!=1)
+ 
+     if(choice!=1)
     {
         cout<<"Sorry! We Couldn't Find the Data you were Seacrching For"<<endl;
     }
@@ -67,7 +69,7 @@ int main()
     Employee obj;
     Employee obj2;
     Employee ob3;
-    ob3.setName("Muhmmad Shayan ");
+    ob3.setName("Muhmmad Shayan");
     obj2.setName("Shayan Shoaib");
     obj.setName("Muhammad Shayan Khan");
     ob.insert(ob3);
