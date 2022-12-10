@@ -6,10 +6,17 @@
 #include "Linked List.hpp"
 #include "Hashing Table.hpp"
 #include "Dynamic Queue.hpp"
+#include<stdlib.h>
+#include <Windows.h>
+#include<unistd.h>
+#include <cstdlib>
+#include<fstream>
 using namespace std;
 
 int main()
 {
+	cout<<"                                        ************ 3 Bros INC ************"<<endl<<endl;
+	
     Date d;
     NodeHierarchy *CEO = new NodeHierarchy("Cheif Executive Officer");
     Hierarchy company;
@@ -24,8 +31,11 @@ int main()
     obj.setSalary(10000000);
     obj.setBonus(2.1);
     obj.setAge(24);
-
+	
+	 ofstream fout;
+    fout.open("Employee_Data.txt",ios::app);
     doubllylinklist ob;
+    fout<<"Name: "<<obj.getName()<<" ID: "<<obj.getId()<<" Department: "<<obj.getDeparment()<<" Salary: "<<obj.getSalary()<<" Bonus: "<<obj.getBonus()<<" Age: "<<obj.getAge()<<endl;
     ob.insert(obj);
     // ob.Display();
 
@@ -39,7 +49,7 @@ int main()
     obj1.setSalary(2000000);
     obj1.setBonus(1.5);
     obj1.setAge(20);
-
+	fout<<"Name: "<<obj1.getName()<<" ID: "<<obj1.getId()<<" Department: "<<obj1.getDeparment()<<" Salary: "<<obj1.getSalary()<<" Bonus: "<<obj1.getBonus()<<" Age: "<<obj1.getAge()<<endl;
     ob.insert(obj1);
     // ob.Display();
 
@@ -55,6 +65,7 @@ int main()
     obj2.setAge(20);
 
     // doubllylinklist ob2;
+    fout<<"Name: "<<obj2.getName()<<" ID: "<<obj2.getId()<<" Department: "<<obj2.getDeparment()<<" Salary: "<<obj2.getSalary()<<" Bonus: "<<obj2.getBonus()<<" Age: "<<obj2.getAge()<<endl;
     ob.insert(obj2);
     // ob.Display();
 
@@ -70,6 +81,7 @@ int main()
     obj3.setAge(29);
 
     // doubllylinklist ob3;
+    fout<<"Name: "<<obj3.getName()<<" ID: "<<obj3.getId()<<" Department: "<<obj3.getDeparment()<<" Salary: "<<obj3.getSalary()<<" Bonus: "<<obj3.getBonus()<<" Age: "<<obj3.getAge()<<endl;
     ob.insert(obj3);
     // ob.Display();
 
@@ -84,6 +96,7 @@ int main()
     obj4.setAge(28);
 
     // doubllylinklist ob4;
+    fout<<"Name: "<<obj4.getName()<<" ID: "<<obj4.getId()<<" Department: "<<obj4.getDeparment()<<" Salary: "<<obj4.getSalary()<<" Bonus: "<<obj4.getBonus()<<" Age: "<<obj4.getAge()<<endl;
     ob.insert(obj4);
     // ob.Display();
 
@@ -99,6 +112,7 @@ int main()
     obj5.setAge(31);
 
     // doubllylinklist ob5;
+    fout<<"Name: "<<obj5.getName()<<" ID: "<<obj5.getId()<<" Department: "<<obj5.getDeparment()<<" Salary: "<<obj5.getSalary()<<" Bonus: "<<obj5.getBonus()<<" Age: "<<obj5.getAge()<<endl;
     ob.insert(obj5);
     // ob.Display();
 
@@ -114,6 +128,7 @@ int main()
     obj6.setAge(27);
 
     // doubllylinklist ob6;
+    fout<<"Name: "<<obj6.getName()<<" ID: "<<obj6.getId()<<" Department: "<<obj6.getDeparment()<<" Salary: "<<obj6.getSalary()<<" Bonus: "<<obj6.getBonus()<<" Age: "<<obj6.getAge()<<endl;
     ob.insert(obj6);
     // ob.Display();
 
@@ -129,6 +144,7 @@ int main()
     obj7.setAge(33);
 
     // doubllylinklist ob7;
+    fout<<"Name: "<<obj7.getName()<<" ID: "<<obj7.getId()<<" Department: "<<obj7.getDeparment()<<" Salary: "<<obj7.getSalary()<<" Bonus: "<<obj7.getBonus()<<" Age: "<<obj7.getAge()<<endl;
     ob.insert(obj7);
     // ob.Display();
 
@@ -144,6 +160,7 @@ int main()
     obj8.setAge(37);
 
     // doubllylinklist ob8;
+    fout<<"Name: "<<obj8.getName()<<" ID: "<<obj8.getId()<<" Department: "<<obj8.getDeparment()<<" Salary: "<<obj8.getSalary()<<" Bonus: "<<obj8.getBonus()<<" Age: "<<obj8.getAge()<<endl;
     ob.insert(obj8);
     // ob.Display();
 
@@ -159,6 +176,7 @@ int main()
     obj9.setAge(24);
 
     // doubllylinklist ob9;
+    fout<<"Name: "<<obj9.getName()<<" ID: "<<obj9.getId()<<" Department: "<<obj9.getDeparment()<<" Salary: "<<obj9.getSalary()<<" Bonus: "<<obj9.getBonus()<<" Age: "<<obj9.getAge()<<endl;
     ob.insert(obj9);
     // ob.Display();
 
@@ -174,6 +192,7 @@ int main()
     obj10.setAge(36);
 
     // doubllylinklist ob10;
+    fout<<"Name: "<<obj10.getName()<<" ID: "<<obj10.getId()<<" Department: "<<obj10.getDeparment()<<" Salary: "<<obj10.getSalary()<<" Bonus: "<<obj10.getBonus()<<" Age: "<<obj10.getAge()<<endl;
     ob.insert(obj10);
     // ob.Display();
 
@@ -189,6 +208,7 @@ int main()
     obj11.setAge(38);
 
     // doubllylinklist ob11;
+    fout<<"Name: "<<obj11.getName()<<" ID: "<<obj11.getId()<<" Department: "<<obj11.getDeparment()<<" Salary: "<<obj11.getSalary()<<" Bonus: "<<obj11.getBonus()<<" Age: "<<obj11.getAge()<<endl;
     ob.insert(obj11);
     // ob.Display();
 
@@ -204,6 +224,7 @@ int main()
     obj12.setAge(23);
 
     // doubllylinklist ob12;
+    fout<<"Name: "<<obj12.getName()<<" ID: "<<obj12.getId()<<" Department: "<<obj12.getDeparment()<<" Salary: "<<obj12.getSalary()<<" Bonus: "<<obj12.getBonus()<<" Age: "<<obj12.getAge()<<endl;
     ob.insert(obj12);
     // ob.Display();
 
@@ -219,22 +240,30 @@ int main()
     obj13.setAge(22);
 
     // doubllylinklist ob13;
+    fout<<"Name: "<<obj13.getName()<<" ID: "<<obj13.getId()<<" Department: "<<obj13.getDeparment()<<" Salary: "<<obj13.getSalary()<<" Bonus: "<<obj13.getBonus()<<" Age: "<<obj13.getAge()<<endl;
     ob.insert(obj13);
     // ob.Display();
     int choice = 0;
+    Queue complain;		//to contain the complains
+    int counter=0;
     do
-    {
-        cout << "\nPress [1] to insert a new employee \nPress [2] to delete a employee \nPress [3] to search a employee \nPress [4] for Sorting Data \nPress [-1] to exit " << endl;
+    {	
+    	if(counter>0){
+    		cout<<"                                        ************ 3 Bros INC ************"<<endl<<endl;
+		}
+        cout << "\nPress [1] to insert a new employee \nPress [2] to delete a employee \nPress [3] to search a employee \nPress [4] for Sorting Data \nPress [5] to enter a complain\nPress [-1] to exit " << endl;
         cin >> choice;
         switch (choice)
         {
         case -1:
+        	counter++;
             break;
         case 1:
         {
             string a, b;
             int c, d, e, f, age;
             float g;
+            system("CLS");
             cout << "\nEnter New Employee Data " << endl;
             Employee obj1;
             Date d1;
@@ -258,54 +287,76 @@ int main()
             cout << "Enter Starting Bonus of Employee: ";
             cin >> g;
             obj1.setBonus(g);
-            doubllylinklist ob14;
-            ob14.insert(obj1);
-            ob14.Display();
-            // doubllylinklist ob14;
+//            doubllylinklist ob14;
+			fout<<"Name: "<<obj1.getName()<<" ID: "<<obj1.getId()<<" Department: "<<obj1.getDeparment()<<" Salary: "<<obj1.getSalary()<<" Bonus: "<<obj1.getBonus()<<" Age: "<<obj1.getAge()<<endl;
             ob.insert(obj1);
             ob.Display();
+            sleep(5);
+            system("CLS");
+            counter++;
             break;
         }
         case 2:
         {
             int choice1 = 0;
-            cout << "How do you wish to delete the employee by?" << endl;
-            cout << "Press [1] to delete by ID\nPress [3] to delete by name\n";
+            system("CLS");
+			cout<<"Enter the ID of the Employee you wish to delete: ";
             cin >> choice1;
-            switch (choice1)
-            {
-            case 1:
-            {
-                // doubllylinklist ob1;
-                int id = 0;
                 cout << "Enter the ID to delete the employee: ";
-                cin >> id;
+                cin >> choice;
                 cout << endl;
                 cout << "Displaying before deleting: " << endl;
                 ob.Display();
                 cout << endl;
-                cout << ob.search_by_ID(id);
+                cout << ob.search_by_ID(choice);
                 cout << endl;
-                ob.delete_fun(ob.search_by_ID(id) + 1);
+                ob.delete_fun(ob.search_by_ID(choice) + 1);
                 cout << "Displaying after deleting: " << endl;
                 ob.Display();
+                sleep(5);
+                system("CLS");
+                counter++;
                 break;
+            
             }
-            }
-            break;
-        }
+            
+        
         case 4:
         {
             DataSort s;
             s.sorting(ob);
+            counter++;
         }
         break;
-        }
+        
+        case 5:
+        	{	
+        		string comp;
+        		int idd;
+        		system("CLS");
+        		fflush(stdin);
+        		cout<< "You have pressed 5. Please enter your complain: ";
+        		getline(cin, comp);
+        		cout<<"Enter the ID of the employee you wish to register a complain against: ";
+        		cin>>idd;
+        		system("CLS");
+        		cout<<"Thank you. Your complain has been registered."<<endl;
+        		sleep(2);
+    			complain.Report_Complain(comp,idd);
+    			system("CLS");
+    			counter++;
+    			
+    			
+			}
+			break;
+		}
+        
     } while (choice != -1);
-    Queue complain;
-    complain.Report_Complain("Hello", ob.head->obj.getId());
-    complain.Report_Complain("World", ob.tail->obj.getId());
-    // complain.Resolve_Complain();
+//    Queue complain;
+//    complain.Report_Complain("Hello", ob.head->obj.getId());
+//    complain.Report_Complain("World", ob.tail->obj.getId());
+//    // complain.Resolve_Complain();
+fout.close();
     complain.Dispaly_complains();
 
 }

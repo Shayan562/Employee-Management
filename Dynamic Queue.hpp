@@ -1,6 +1,7 @@
 #pragma once
 #include<iostream>
 #include"Nodes.hpp"
+#include <fstream>
 using namespace std;
 class Queue
 {
@@ -15,6 +16,10 @@ class Queue
     void Report_Complain(string data, int id)
     {
         NodeQue *temp=new NodeQue(data,id);
+        ofstream fout;
+        fout.open("Complains_Reported.txt",ios::app);
+        fout<<"Complain: "<<temp->complaint<<" ID: "<<temp->ID<<endl;
+        fout.close();
         if( rear==NULL)
         {
            
