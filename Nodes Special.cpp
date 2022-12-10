@@ -10,9 +10,14 @@ public:
     NodeBST *left;
     NodeBST *right;
     int numOfEmployees;
-    NodeBST(){
+    NodeBST(DataBST data){
         left=NULL;
         right=NULL;
         numOfEmployees=0;
+        this->data=data;
+    }
+    void insert(Employee &emp){
+        numOfEmployees++;
+        list.insert(emp);
     }
 };
