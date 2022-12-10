@@ -71,15 +71,3 @@ public:
         this->emp=emp;
     }
 };
-class NodeBST{
-public:
-    SingllyList list;
-    NodeBST *left;
-    NodeBST *right;
-    int numOfEmployees;
-    NodeBST(){
-        left=NULL;
-        right=NULL;
-        numOfEmployees=0;
-    }
-};
