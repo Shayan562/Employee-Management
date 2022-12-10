@@ -36,8 +36,33 @@ public:
         }
         return 0;
     }
+    
+    NodeList* employee_by_ID(int id)
+    { // returns the index of the node at which the id is at.
+        NodeList *temp = head;
+        //int counter = 0;
+        //                 cout<<temp->obj.getId()<<endl;
+        //                 temp=temp->next;
+        //                  cout<<temp->obj.getId()<<endl;
+        //                 temp=temp->next;
+        //                  cout<<temp->obj.getId()<<endl;
+        //                 temp=temp->next;
+        while (temp != NULL)
+        {
+            if (temp->obj.getId() == id)
+            {
+                return temp;
+            }
+            else
+            {
+                //counter++;
+                temp = temp->next;
+            }
+        }
+        return 0;
+    }
 
-    int search_by_Name(char *a)
+    int search_by_Name(char *a)		//have problems working need to review...
     { // returns the index of the node at which the name is at.
         NodeList *temp = head;
         int counter = 0;

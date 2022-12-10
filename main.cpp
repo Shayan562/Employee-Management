@@ -11,11 +11,12 @@
 #include<unistd.h>
 #include <cstdlib>
 #include<fstream>
+#include "Delete and Update.h"
 using namespace std;
 
 int main()
 {
-	cout<<"                                        ************ 3 Bros INC ************"<<endl<<endl;
+	cout<<"\t\t\t\t\t************ 3 Bros INC ************"<<endl<<endl;
 	
     Date d;
     NodeHierarchy *CEO = new NodeHierarchy("Cheif Executive Officer");
@@ -249,7 +250,7 @@ int main()
     do
     {	
     	if(counter>0){
-    		cout<<"                                        ************ 3 Bros INC ************"<<endl<<endl;
+    			cout<<"\t\t\t\t\t************ 3 Bros INC ************"<<endl<<endl;
 		}
         cout << "\nPress [1] to insert a new employee \nPress [2] to delete a employee \nPress [3] to search a employee \nPress [4] for Sorting Data \nPress [5] to enter a complain\nPress [-1] to exit " << endl;
         cin >> choice;
@@ -298,12 +299,12 @@ int main()
         }
         case 2:
         {
-            int choice1 = 0;
-            system("CLS");
-			cout<<"Enter the ID of the Employee you wish to delete: ";
-            cin >> choice1;
-                cout << "Enter the ID to delete the employee: ";
-                cin >> choice;
+             	int choice1 = 0;
+            	system("CLS");
+				cout<<"Enter the ID of the Employee you wish to delete: ";
+            	cin >> choice1;
+//                cout << "Enter the ID to delete the employee: ";
+//                cin >> choice;
                 cout << endl;
                 cout << "Displaying before deleting: " << endl;
                 ob.Display();
@@ -313,12 +314,13 @@ int main()
                 ob.delete_fun(ob.search_by_ID(choice) + 1);
                 cout << "Displaying after deleting: " << endl;
                 ob.Display();
-                sleep(5);
+                sleep(10);
                 system("CLS");
                 counter++;
                 break;
             
             }
+            
             
         
         case 4:
