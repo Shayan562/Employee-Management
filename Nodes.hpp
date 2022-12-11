@@ -71,4 +71,7 @@ public:
         this->emp=emp;
     }
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> Tree_Implementation

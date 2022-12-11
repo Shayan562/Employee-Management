@@ -6,6 +6,13 @@
 #include "Linked List.hpp"
 #include "Hashing Table.hpp"
 #include "Dynamic Queue.hpp"
+<<<<<<< HEAD
+=======
+//#include<stdlib.h>
+//#include <Windows.h>
+//#include<unistd.h>
+//#include <cstdlib>
+>>>>>>> c72824bc00a8fd7acad226ff2527f1908d576e40
 #include<fstream>
 #include "Update and Delete.hpp"
 using namespace std;
@@ -13,8 +20,8 @@ using namespace std;
 int main()
 {
 	cout<<"\t\t\t\t\t************ 3 Bros INC ************"<<endl<<endl;
-	HashTable h1;
 	
+	HashTable h1;
     Date d;
     NodeHierarchy *CEO = new NodeHierarchy("Cheif Executive Officer");
     Hierarchy company;
@@ -256,7 +263,8 @@ int main()
     h1.insert(obj13);
     // ob.Display();
     int choice = 0;
-    Queue complain;		//to contain the complains
+    Queue complain;	//to contain the complains
+  
     int counter=0;
     do
     {	
@@ -264,7 +272,7 @@ int main()
     			cout<<"\t\t\t\t\t************ 3 Bros INC ************"<<endl<<endl;
 		}
         cout << "\nPress [1] to insert a new employee \nPress [2] to delete a employee \nPress [3] to search a employee \nPress [4] for Sorting Data \nPress [5] to enter a complain\nPress [-1] to exit " << endl;
-        cin >> choice;
+		cin >> choice;
         switch (choice)
         {
         case -1:
@@ -326,7 +334,11 @@ int main()
                 ob.delete_fun(ob.search_by_ID(choice) + 1);
                 cout << "Displaying after deleting: " << endl;
                 ob.Display();
+<<<<<<< HEAD
                 //sleep(10);
+=======
+              //  sleep(10);
+>>>>>>> c72824bc00a8fd7acad226ff2527f1908d576e40
                 system("CLS");
                 counter++;
                 break;
@@ -355,7 +367,7 @@ int main()
         		cin>>idd;
         		system("CLS");
         		cout<<"Thank you. Your complain has been registered."<<endl;
-        		sleep(2);
+        		//sleep(2);
     			complain.Report_Complain(comp,idd);
     			system("CLS");
     			counter++;
