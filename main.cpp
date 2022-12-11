@@ -331,7 +331,7 @@ int main()
                 ob.delete_fun(ob.search_by_ID(choice) + 1);
                 cout << "Displaying after deleting: " << endl;
                 ob.Display();
-                sleep(10);
+                //sleep(10);
                 system("CLS");
                 counter++;
                 break;
