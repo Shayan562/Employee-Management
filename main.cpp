@@ -264,7 +264,7 @@ int main()
     	if(counter>0){
     			cout<<"\t\t\t\t\t************ 3 Bros INC ************"<<endl<<endl;
 		}
-        cout << "\nPress [1] to insert a new employee \nPress [2] to delete a employee \nPress [3] to search a employee \nPress [4] for Sorting Data \nPress [5] to enter a complain\nPress [-1] to exit " << endl;
+        cout << "\nPress [1] to insert a new employee \nPress [2] to delete a employee \nPress [3] to search a employee \nPress [4] for Sorting Data \nPress [5] to enter a complain\nPress [6] to view complains\nPress [-1] to exit " << endl;
 		cin >> choice;
         switch (choice)
         {
@@ -337,8 +337,10 @@ int main()
         
         case 4:
         {
-            DataSort s;
-            s.sorting(ob);
+
+            //call sort from data management
+            // DataSort s;
+            // s.sorting(ob);
             counter++;
         }
         break;
@@ -362,6 +364,12 @@ int main()
     			
 			}
 			break;
+        case 6:
+            {
+            system("CLS");
+            complain.Dispaly_complains();
+            break;
+            }
 		}
         
     } while (choice != -1);
@@ -370,6 +378,5 @@ int main()
 //    complain.Report_Complain("World", ob.tail->obj.getId());
 //    // complain.Resolve_Complain();
 fout.close();
-    complain.Dispaly_complains();
 
 }

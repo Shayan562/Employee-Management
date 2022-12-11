@@ -8,25 +8,13 @@ using namespace std;
 class DataSort
 {
 public:
-    void sorting(doubllylinklist &obj)
+    void sorting(Employee *arrInput, int sizeInput)
     {
-        NodeList *temphead = obj.head;
-        int size = 0;
-        while (temphead != NULL)
-        {
-            size++;
-            temphead = temphead->next;
-        }
-        cout << endl;
-        // cout<<size;
-        NodeList *emp = obj.head;
-        Employee *arr;
-        arr = new Employee[size];
-        for (int i = 0; i < size; i++)
-        {
-            arr[i] = emp->obj;
-            emp = emp->next;
-        }
+        int size = sizeInput; //change
+        
+
+        Employee *arr = arrInput; //change
+        
         int choice;
         cout << "----------Sorting Data----------\n";
         cout << "Press [1] to Sort Data accoring to Name \n";

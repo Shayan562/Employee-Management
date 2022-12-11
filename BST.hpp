@@ -1,4 +1,4 @@
-// #pragma once
+#pragma once
 #include <iostream>
 #include "Linked List.hpp"
 #include "Nodes Special.cpp"
@@ -6,16 +6,20 @@ template<class tree>
 class BST{
 public:
     NodeBST<tree>* head;
+    int total;
     BST(){
         head=NULL;
+        total=0;
     }
     NodeBST<tree>* insert(NodeBST<tree>* node, Employee emp, tree data){   
         if(node==NULL){
+            total++;
             NodeBST<tree> *temp=new NodeBST<tree>(data);
             temp->insert(emp);
             return temp;
         } 
         else if(data==node->data){
+            total++;
             node->insert(emp);
             return NULL;
         }
@@ -138,39 +142,51 @@ public:
         if(node==NULL){
             return;
         }
-        else{
+        else if(node->left==NULL && node->right==NULL){
+            node->list.Display();
+        }
+        else if(node->left==NULL){
+            node->list.Display();
+            inorder(node->right);
+        }
+        else if(node->right==NULL){
+            node->list.Display();
             inorder(node->left);
+        }
+        else{
             cout<<"Data: "<<node->data<<", Num of employees: "<<node->numOfEmployees<<"\n";
             node->list.Display();
+    
+            inorder(node->left);
             inorder(node->right);
         }
     }
 };
 
-int main(){
-    Employee a;
-    a.setAge(30);
-    Employee b;
-    b.setAge(30);
-    Employee c;
-    c.setAge(25);
-    Employee d;
-    d.setAge(23);
-    Employee e;
-    e.setAge(24);
-    BST<int> tree;
-    tree.head=tree.insert(tree.head,a,a.getAge());
-    tree.insert(tree.head, c, c.getAge());
-    // tree.inorder(tree.head);
-    cout<<"--------NEW INSERTION--------\n";
-    tree.insert(tree.head, b, b.getAge());
-    tree.insert(tree.head, d, d.getAge());
-    tree.insert(tree.head, e, e.getAge());
-    tree.remove(tree.head, 30, 2);
-    // tree.inorder(tree.head);
+// int main(){
+//     Employee a;
+//     a.setAge(30);
+//     Employee b;
+//     b.setAge(30);
+//     Employee c;
+//     c.setAge(25);
+//     Employee d;
+//     d.setAge(23);
+//     Employee e;
+//     e.setAge(24);
+//     BST<int> tree;
+//     tree.head=tree.insert(tree.head,a,a.getAge());
+//     tree.insert(tree.head, c, c.getAge());
+//     // tree.inorder(tree.head);
+//     cout<<"--------NEW INSERTION--------\n";
+//     tree.insert(tree.head, b, b.getAge());
+//     tree.insert(tree.head, d, d.getAge());
+//     tree.insert(tree.head, e, e.getAge());
+//     // tree.remove(tree.head, 30, 2);
+//     tree.inorder(tree.head);
 
-    cout<<"Deleting Another\n\n";
-    tree.remove(tree.head, 30, 1);
-    tree.inorder(tree.head);
+//     cout<<"Deleting Another\n\n";
+//     // tree.remove(tree.head, 30, 1);
+//     // tree.inorder(tree.head);
 
-}
+// }

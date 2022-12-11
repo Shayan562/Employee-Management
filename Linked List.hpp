@@ -179,7 +179,7 @@ public:
     NodeSingllyList *head;
     NodeSingllyList *tail;
     SingllyList();
-    void insert(Employee &);
+    void insert(Employee );
     void remove(int);
     void Display(); 
  
@@ -188,7 +188,7 @@ SingllyList::SingllyList(){
     head=NULL;
     tail=NULL;
 }
-void SingllyList::insert(Employee &emp){
+void SingllyList::insert(Employee emp){
     NodeSingllyList *temp=new NodeSingllyList(emp);
     if(head==NULL){
         head=temp;
