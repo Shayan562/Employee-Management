@@ -1,0 +1,112 @@
+Muhammad Rehan Khan
+24
+3172
+Cheif Executive Officer
+2.1
+17
+11
+1994
+Azaan Nabi Khan
+20
+3208
+Cheif Technology Officer
+1.5
+1
+2
+1996
+Syed Muhammad Shayan Hussain
+20
+3
+Managing Director
+2.3
+9
+2
+1996
+Oliviia Robin
+29
+4
+Head of Operations
+1
+19
+6
+1999
+Ali Ahmed
+28
+5
+Project Manager
+1.5
+9
+4
+1997
+Matt Kench
+31
+6
+Project Manager
+1.5
+22
+12
+1999
+Muhammad Asad
+27
+7
+Project Manager
+1.5
+14
+3
+2000
+Khubaib Lodhi
+33
+8
+Cheif Financial Officer
+1.5
+20
+6
+2000
+Syed Sana Hussain
+37
+9
+Finance Director
+1.5
+19
+10
+2002
+Taha Khan
+24
+10
+Finance Manager
+1.5
+30
+8
+2001
+Ramla Nawaz
+36
+11
+Human Resource Director
+1.5
+4
+4
+2004
+Maria Asrar
+38
+12
+Human Resource Manager
+1.5
+9
+9
+1999
+Mustansir Molwani
+23
+13
+Human Resource Generalist
+1.5
+11
+11
+2010
+Fahad Farooqi
+22
+14
+Director of Recuriting
+1.5
+13
+11
+2001
