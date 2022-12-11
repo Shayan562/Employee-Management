@@ -27,7 +27,7 @@ public:
 HashTable::HashTable(){
     elements=0;
     alpha=0.75;
-    size=totalEmployees;
+    size=totalEmployees+1;
     table= new Array<SingllyList>(size);
 }
 int HashTable::hash(int key){

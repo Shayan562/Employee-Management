@@ -17,8 +17,8 @@ using namespace std;
 int main()
 {
 	cout<<"\t\t\t\t\t************ 3 Bros INC ************"<<endl<<endl;
-	HashTable h1;
 	
+	HashTable h1;
     Date d;
     NodeHierarchy *CEO = new NodeHierarchy("Cheif Executive Officer");
     Hierarchy company;
@@ -260,7 +260,8 @@ int main()
     h1.insert(obj13);
     // ob.Display();
     int choice = 0;
-    Queue complain;		//to contain the complains
+    Queue complain;	//to contain the complains
+  
     int counter=0;
     do
     {	
@@ -268,7 +269,7 @@ int main()
     			cout<<"\t\t\t\t\t************ 3 Bros INC ************"<<endl<<endl;
 		}
         cout << "\nPress [1] to insert a new employee \nPress [2] to delete a employee \nPress [3] to search a employee \nPress [4] for Sorting Data \nPress [5] to enter a complain\nPress [-1] to exit " << endl;
-        cin >> choice;
+		cin >> choice;
         switch (choice)
         {
         case -1:
