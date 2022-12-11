@@ -179,7 +179,7 @@ void SingllyList::remove(int id){
     if(head==NULL){
         return;
     }
-    else if(curr->emp.getId()==id){
+    else if(curr->emp.getId()==id){//node to delete is head node
         NodeSingllyList *del=curr;
         head=curr->next;
         delete del;
