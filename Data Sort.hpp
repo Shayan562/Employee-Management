@@ -16,10 +16,10 @@ public:
         Employee *arr = arrInput; //change
         
         int choice;
-        cout << "----------Sorting Data----------\n";
-        cout << "Press [1] to Sort Data accoring to Name \n";
-        cout << "Press [2] to Sort Data accoring to Salary\n";
-        cout << "Press [3] to Sort Data accoring to Age\n";
+        cout << "\n\t----------Sorting Data----------\n";
+        cout << "\tPress [1] to Sort Data according to Name \n";
+        cout << "\tPress [2] to Sort Data according to Salary\n";
+        cout << "\tPress [3] to Sort Data according to Age\n";
 
         cin >> choice;
         mergesort(arr, 0, size - 1, choice);

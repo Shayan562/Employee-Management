@@ -60,7 +60,7 @@ public:
     }
     void remove(NodeBST<tree>* node, tree data, int id){//no validation check
         if(node==NULL){
-            cout<<"Could Not Delete\n";
+            cout<<"\tCould Not Delete\n";
         }
         else if(data==node->data){//delete/linked list check
             if(!removeFromList(node,id)){//the list/node has only one employee obj
@@ -154,7 +154,7 @@ public:
             inorder(node->left);
         }
         else{
-            cout<<"Data: "<<node->data<<", Num of employees: "<<node->numOfEmployees<<"\n";
+            cout<<"\tData: "<<node->data<<", Num of employees: "<<node->numOfEmployees<<"\n";
             node->list.Display();
     
             inorder(node->left);

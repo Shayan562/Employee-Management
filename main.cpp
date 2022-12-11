@@ -13,6 +13,7 @@ using namespace std;
 
 int main()
 {
+	system("Color 8F");
     cout << "\t\t\t\t\t************ 3 Bros INC ************" << endl
          << endl;
     DataManagement application;
@@ -21,15 +22,18 @@ int main()
     int counter = 0;
     do
     {
+    	
+    	//system("CLS");
         if (counter > 0)
         {
             cout << "\t\t\t\t\t************ 3 Bros INC ************" << endl
                  << endl;
         }
-        cout << "\nPress [1] to insert a new employee\nPress [2] to delete an employee\n"<<
-        "Press [3] to edit an employee\nPress [4] to search a employee\nPress [5] for Sorting Data\n"<<
-        "Press [6] to display\nPress [7] to enter a complain\nPress [8] to view complains\nPress [-1] to exit" << endl;
+        cout << "\n\tPress [1] to insert a new employee\n\tPress [2] to delete an employee\n"<<
+        "\tPress [3] to edit an employee\n\tPress [4] to search a employee\n\tPress [5] for Sorting Data\n"<<
+        "\tPress [6] to display\n\tPress [7] to enter a complain\n\tPress [8] to view complains\n\tPress [-1] to exit" << endl;
         cin >> choice;
+        system("cls");
         switch (choice)
         {
         case -1:
@@ -65,7 +69,7 @@ int main()
             obj1.setBonus(g);
             application.insert(obj1);
             //
-            system("CLS");
+           
             counter++;
             break;
         }
@@ -73,22 +77,32 @@ int main()
             system("CLS");
             application.deleteData();
             counter++;
+            ;
             break;
         case 3:
+        	system("CLS");
             application.updateData();
             counter++;
+             
             break;
         case 4:
+        	system("CLS");
             application.search();
             counter++;
+           
             break;
         case 5:
+        	system("CLS");
             application.sort();
             counter++;
+             
+            //system("cls");
             break;
         case 6:
+        	system("CLS");
             application.displayData();
             counter++;
+             
             break;
         case 7:
         {
@@ -103,7 +117,6 @@ int main()
             system("CLS");
             cout << "Thank you. Your complain has been registered." << endl;
             complain.Report_Complain(comp, idd);
-            system("CLS");
             counter++;
             break;
         }

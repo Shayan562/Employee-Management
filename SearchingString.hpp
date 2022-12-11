@@ -41,9 +41,9 @@ class string_search{
             //cout<<cmp<<";";
             if(cmp==a)
             {
-                cout<<"Did You Mean: "<<name<<endl;
-                cout<<"Press [1] for Yes"<<endl;
-                cout<<"Press [0] to Continue"<<endl;
+                cout<<"\tDid You Mean: "<<name<<endl;
+                cout<<"\tPress [1] for Yes"<<endl;
+                cout<<"\tPress [0] to Continue"<<endl;
                 cin>>choice;
                 if(choice==1)
                 {
@@ -60,7 +60,7 @@ class string_search{
  
      if(choice!=1)
     {
-        cout<<"Sorry! We Couldn't Find the Data you were Searching For"<<endl;
+        cout<<"\tSorry! We Couldn't Find the Data you were Searching For"<<endl;
         return " ";
     }
 }

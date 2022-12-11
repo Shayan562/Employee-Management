@@ -52,14 +52,15 @@ class Queue
     }
     void Dispaly_complains()
     {
-        cout<<"------------------COMPLAIN LOG------------------"<<endl;
+        cout<<"\n\t------------------COMPLAIN LOG------------------"<<endl;
         int i=1;
         NodeQue *curr=front;
         while(curr!=NULL)
         {
-            cout<<i++<<". "<<curr->complaint<<" against \"ID: "<<curr->ID<<"\""<<endl;
+            cout<<"\t"<<i++<<". "<<curr->complaint<<" against \"ID: "<<curr->ID<<"\""<<endl;
             curr=curr->next;
-           
+           	cout<<endl;
         }
+        cout<<endl;
     }
 };

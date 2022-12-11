@@ -51,7 +51,7 @@ void DataManagement::readFromFile(){
     ifstream rd;
     rd.open("DataBase.txt");
     if(!rd){
-        cout<<"Fail";
+        cout<<"\tFail";
     }
     
     string name, department="", bonusStr;
@@ -151,12 +151,12 @@ void DataManagement::deleteData(){
     // void Delete_all(doubllylinklist &list,HashTable &table,int ID){	//pass an employee ID to delete
 	// //delete by id:
     int id;
-    cout<<"Enter the ID: ";
+    cout<<"\tEnter the ID: ";
     cin>>id;
-	cout<<"Removing Employee "<<id<<endl;
+	cout<<"\tRemoving Employee "<<id<<endl;
     Employee* obj=table.search(id);
     if(obj==NULL){
-        cout<<"Employee Not Found\n";
+        cout<<"\tEmployee Not Found\n";
         return;
     }
 	table.remove(id); //delete from hash table.
@@ -165,7 +165,7 @@ void DataManagement::deleteData(){
 }
 void DataManagement::updateData(){
     int ID;
-    cout<<"Enter the ID: ";
+    cout<<"\tEnter the ID: ";
     cin>>ID;
     int choice=0;
 	// int index=list.search_by_ID(ID);
@@ -176,52 +176,52 @@ void DataManagement::updateData(){
 
 	Employee* obj1=table.search(ID);
     if(obj1==NULL){
-        cout<<"Not Found\n";
+        cout<<"\tNot Found\n";
         return;
     }
     // Employee obj1(*obj);
-	cout<<"Enter the new information of the Employee: "<<endl;
-	cout<<"Do you wish to change the name of the employee against the ID "<<ID<<"? Press 1 if yes: ";
+	cout<<"\tEnter the new information of the Employee: "<<endl;
+	cout<<"\tDo you wish to change the name of the employee against the ID "<<ID<<"? Press 1 if yes: ";
 	cin>>choice;
 	if(choice==1){
 		string a;
 		fflush(stdin);
-		cout<<"Enter the updated name of the employee: ";
+		cout<<"\tEnter the updated name of the employee: ";
 		getline(cin, a);
 		obj1->setName(a);
 	}	
-	cout<<"Do you wish to change the bonus of the employee against the ID "<<ID<<"? Press 1 if yes: ";
+	cout<<"\tDo you wish to change the bonus of the employee against the ID "<<ID<<"? Press 1 if yes: ";
 	cin>>choice;
 	if(choice==1){
-		cout<<"Enter the updated Bonus of the employee: ";
+		cout<<"\tEnter the updated Bonus of the employee: ";
 		float a;
 		cin>>a;
 		obj1->setBonus(a);
 	}
 	
-	cout<<"Do you wish to change the department of the employee against the ID "<<ID<<"? Press 1 if yes: ";
+	cout<<"\tDo you wish to change the department of the employee against the ID "<<ID<<"? Press 1 if yes: ";
 	cin>>choice;
 	if(choice==1){
 		fflush(stdin);
 		string a;
-		cout<<"Enter the updated department of the employee: ";
+		cout<<"\tEnter the updated department of the employee: ";
 		getline(cin,a);
 		obj1->setDeparment(a);
 	}
 	
-	cout<<"Do you wish to change the salary of the employee against the ID "<<ID<<"? Press 1 if yes: ";
+	cout<<"\tDo you wish to change the salary of the employee against the ID "<<ID<<"? Press 1 if yes: ";
 	cin>>choice;
 	if(choice==1){
-		cout<<"Enter the updated salary of the employee: ";
+		cout<<"\tEnter the updated salary of the employee: ";
 		long long int a;
 		cin>>a;
 		obj1->setSalary(a);
 	}
 	
-	cout<<"Do you wish to change the Age of the employee against the ID "<<ID<<"? Press 1 if yes: ";
+	cout<<"\tDo you wish to change the Age of the employee against the ID "<<ID<<"? Press 1 if yes: ";
 	cin>>choice;
 	if(choice==1){
-		cout<<"Enter the updated Age of the employee: ";
+		cout<<"\tEnter the updated Age of the employee: ";
 		int a;
 		cin>>a;
 		obj1->setAge(a);
@@ -236,7 +236,7 @@ void DataManagement::search(){
     while(true){
 
     system("CLS");
-    cout << "\nPress [1] to search by ID\nPress [2] to search by Name\nPress [3] to search by Age\nPress [4] to search by Salary\nPress [5] to search by Department\nPress [6] to go back\n";
+    cout << "\n\tPress [1] to search by ID\n\tPress [2] to search by Name\n\tPress [3] to search by Age\n\tPress [4] to search by Salary\n\tPress [5] to search by Department\n\tPress [6] to go back\n";
     int choice;
     cin>>choice;
     
@@ -245,24 +245,24 @@ void DataManagement::search(){
     case 1:
         {
             int id;
-            cout<<"Enter the ID: ";
+            cout<<"\tEnter the ID: ";
             cin>>id;
             Employee *obj=NULL;
             obj=table.search(id);
             if(obj==NULL){
-                cout<<"Not Found\n";
+                cout<<"\tNot Found\n";
             }
             else{
-                cout<<"Found\n";
+                cout<<"\tFound\n";
                 obj->Display();
             }
-            cout<<"\nEnter 1 to continue: ";
+            cout<<"\n\tEnter 1 to continue: ";
             cin>>c;
             break;
         }
     case 2:{
         string name;
-        cout<<"Enter the Name(first letter capital): ";
+        cout<<"\tEnter the Name(first letter capital): ";
         fflush(stdin);
         getline(cin,name);
         NodeBST<string>* functionObj=treeNames->search(treeNames->head,name);
@@ -296,17 +296,17 @@ void DataManagement::search(){
                 cout<<endl;
             }
         }
-        cout<<"\nEnter 1 to continue: ";
+        cout<<"\n\tEnter 1 to continue: ";
         cin>>c;
         break;
     }
     case 3:{
         int age;
-        cout<<"Enter the Age: ";
+        cout<<"\tEnter the Age: ";
         cin>>age;
         NodeBST<int>* functionObj=treeAge->search(treeAge->head, age);
         if(functionObj==NULL){
-            cout<<"Not Found\n";
+            cout<<"\tNot Found\n";
         }
         else{
             NodeSingllyList *curr=functionObj->list.head;
@@ -316,17 +316,17 @@ void DataManagement::search(){
                 cout<<endl;
             }
         }
-        cout<<"\nEnter 1 to continue: ";
+        cout<<"\n\tEnter 1 to continue: ";
         cin>>c;
         break;
     }
     case 4:{
         int salary;
-        cout<<"Enter the Salary: ";
+        cout<<"\tEnter the Salary: ";
         cin>>salary;
         NodeBST<int>* functionObj=treeSalary->search(treeSalary->head, salary);
         if(functionObj==NULL){
-            cout<<"Not Found\n";
+            cout<<"\tNot Found\n";
         }
         else{
             NodeSingllyList *curr=functionObj->list.head;
@@ -336,7 +336,7 @@ void DataManagement::search(){
                 cout<<endl;
             }
         }
-        cout<<"\nEnter 1 to continue: ";
+        cout<<"\n\tEnter 1 to continue: ";
         cin>>c;
         break;
     }
