@@ -6,10 +6,6 @@
 #include "Linked List.hpp"
 #include "Hashing Table.hpp"
 #include "Dynamic Queue.hpp"
-#include<stdlib.h>
-#include <Windows.h>
-#include<unistd.h>
-#include <cstdlib>
 #include<fstream>
 #include "Update and Delete.hpp"
 using namespace std;
@@ -308,7 +304,7 @@ int main()
             ob.insert(obj1);
             h1.insert(obj1);
             ob.Display();
-            sleep(5);
+            //sleep(5);
             system("CLS");
             counter++;
             break;
@@ -330,7 +326,7 @@ int main()
                 ob.delete_fun(ob.search_by_ID(choice) + 1);
                 cout << "Displaying after deleting: " << endl;
                 ob.Display();
-                sleep(10);
+                //sleep(10);
                 system("CLS");
                 counter++;
                 break;
