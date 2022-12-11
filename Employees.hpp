@@ -13,7 +13,7 @@ public:
     int date;
     int month;
     int year;
-    Date(int data = 1, int month = 1, int year = 2022)
+    Date(int date = 1, int month = 1, int year = 2022)
     {
         this->date = date;
         this->month = month;

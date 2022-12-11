@@ -1,5 +1,6 @@
 Muhammad Rehan Khan
 24
+10000000
 3172
 Cheif Executive Officer
 2.1
@@ -8,6 +9,7 @@ Cheif Executive Officer
 1994
 Azaan Nabi Khan
 20
+2000000
 3208
 Cheif Technology Officer
 1.5
@@ -16,6 +18,7 @@ Cheif Technology Officer
 1996
 Syed Muhammad Shayan Hussain
 20
+2000000
 3
 Managing Director
 2.3
@@ -24,6 +27,7 @@ Managing Director
 1996
 Oliviia Robin
 29
+150000
 4
 Head of Operations
 1
@@ -32,6 +36,7 @@ Head of Operations
 1999
 Ali Ahmed
 28
+200000
 5
 Project Manager
 1.5
@@ -40,6 +45,7 @@ Project Manager
 1997
 Matt Kench
 31
+300000
 6
 Project Manager
 1.5
@@ -48,6 +54,7 @@ Project Manager
 1999
 Muhammad Asad
 27
+400000
 7
 Project Manager
 1.5
@@ -56,6 +63,7 @@ Project Manager
 2000
 Khubaib Lodhi
 33
+500000
 8
 Cheif Financial Officer
 1.5
@@ -64,6 +72,7 @@ Cheif Financial Officer
 2000
 Syed Sana Hussain
 37
+200000
 9
 Finance Director
 1.5
@@ -72,6 +81,7 @@ Finance Director
 2002
 Taha Khan
 24
+250000
 10
 Finance Manager
 1.5
@@ -80,6 +90,7 @@ Finance Manager
 2001
 Ramla Nawaz
 36
+350000
 11
 Human Resource Director
 1.5
@@ -88,6 +99,7 @@ Human Resource Director
 2004
 Maria Asrar
 38
+250000
 12
 Human Resource Manager
 1.5
@@ -96,6 +108,7 @@ Human Resource Manager
 1999
 Mustansir Molwani
 23
+550000
 13
 Human Resource Generalist
 1.5
@@ -104,6 +117,7 @@ Human Resource Generalist
 2010
 Fahad Farooqi
 22
+850000
 14
 Director of Recuriting
 1.5
