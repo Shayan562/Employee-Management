@@ -27,6 +27,7 @@ void update_all(doubllylinklist &list, HashTable &table, int ID){
 	for(int i=0;i<index;i++){
 		temp1=temp1->next; 		//to get to the node we need to update.
 	}
+	Employee* obj1=table.search(ID);
 	cout<<"Enter the new information of the Employee: "<<endl;
 	cout<<"Do you wish to change the name of the employee against the ID "<<ID<<"? Press 1 if yes: ";
 	cin>>choice;
@@ -35,6 +36,7 @@ void update_all(doubllylinklist &list, HashTable &table, int ID){
 		fflush(stdin);
 		cout<<"Enter the updated name of the employee: ";
 		getline(cin, a);
+		obj1->setName(a);
 		temp1->obj.setName(a);
 	}
 	
@@ -45,6 +47,7 @@ void update_all(doubllylinklist &list, HashTable &table, int ID){
 		float a;
 		cin>>a;
 		//obj.setBonus(a);
+		obj1->setBonus(a);
 		temp1->obj.setBonus(a);
 	}
 	
@@ -56,6 +59,7 @@ void update_all(doubllylinklist &list, HashTable &table, int ID){
 		cout<<"Enter the updated department of the employee: ";
 		getline(cin,a);
 		//obj.setDeparment(a);
+		obj1->setDeparment(a);
 		temp1->obj.setDeparment(a);
 	}
 	
@@ -66,9 +70,30 @@ void update_all(doubllylinklist &list, HashTable &table, int ID){
 		long long int a;
 		cin>>a;
 		//obj.setSalary(a);
+		obj1->setSalary(a);
 		temp1->obj.setSalary(a);
+	}
+	
+	cout<<"Do you wish to change the Age of the employee against the ID "<<ID<<"? Press 1 if yes: ";
+	cin>>choice;
+	if(choice==1){
+		cout<<"Enter the updated Age of the employee: ";
+		 int a;
+		cin>>a;
+		//obj.setSalary(a);
+		obj1->setAge(a);
+		temp1->obj.setAge(a);
 	}
 	
 	// for hashtable:
 	
+	
+    
+//    Employee* obj=table.search(ID);
+    //obj->setName("Khan");
+    
+//    cout<<endl;
+//    table.print();
 }
+	
+

@@ -17,6 +17,7 @@ using namespace std;
 int main()
 {
 	cout<<"\t\t\t\t\t************ 3 Bros INC ************"<<endl<<endl;
+	HashTable h1;
 	
     Date d;
     NodeHierarchy *CEO = new NodeHierarchy("Cheif Executive Officer");
@@ -38,6 +39,7 @@ int main()
     doubllylinklist ob;
     fout<<"Name: "<<obj.getName()<<" ID: "<<obj.getId()<<" Department: "<<obj.getDeparment()<<" Salary: "<<obj.getSalary()<<" Bonus: "<<obj.getBonus()<<" Age: "<<obj.getAge()<<endl;
     ob.insert(obj);
+    h1.insert(obj);
     // ob.Display();
 
     Employee obj1;
@@ -52,6 +54,7 @@ int main()
     obj1.setAge(20);
 	fout<<"Name: "<<obj1.getName()<<" ID: "<<obj1.getId()<<" Department: "<<obj1.getDeparment()<<" Salary: "<<obj1.getSalary()<<" Bonus: "<<obj1.getBonus()<<" Age: "<<obj1.getAge()<<endl;
     ob.insert(obj1);
+    h1.insert(obj1);
     // ob.Display();
 
     Employee obj2;
@@ -68,6 +71,7 @@ int main()
     // doubllylinklist ob2;
     fout<<"Name: "<<obj2.getName()<<" ID: "<<obj2.getId()<<" Department: "<<obj2.getDeparment()<<" Salary: "<<obj2.getSalary()<<" Bonus: "<<obj2.getBonus()<<" Age: "<<obj2.getAge()<<endl;
     ob.insert(obj2);
+    h1.insert(obj2);
     // ob.Display();
 
     Employee obj3;
@@ -84,6 +88,7 @@ int main()
     // doubllylinklist ob3;
     fout<<"Name: "<<obj3.getName()<<" ID: "<<obj3.getId()<<" Department: "<<obj3.getDeparment()<<" Salary: "<<obj3.getSalary()<<" Bonus: "<<obj3.getBonus()<<" Age: "<<obj3.getAge()<<endl;
     ob.insert(obj3);
+    h1.insert(obj3);
     // ob.Display();
 
     Employee obj4;
@@ -99,6 +104,7 @@ int main()
     // doubllylinklist ob4;
     fout<<"Name: "<<obj4.getName()<<" ID: "<<obj4.getId()<<" Department: "<<obj4.getDeparment()<<" Salary: "<<obj4.getSalary()<<" Bonus: "<<obj4.getBonus()<<" Age: "<<obj4.getAge()<<endl;
     ob.insert(obj4);
+    h1.insert(obj4);
     // ob.Display();
 
     Employee obj5;
@@ -115,6 +121,7 @@ int main()
     // doubllylinklist ob5;
     fout<<"Name: "<<obj5.getName()<<" ID: "<<obj5.getId()<<" Department: "<<obj5.getDeparment()<<" Salary: "<<obj5.getSalary()<<" Bonus: "<<obj5.getBonus()<<" Age: "<<obj5.getAge()<<endl;
     ob.insert(obj5);
+    h1.insert(obj5);
     // ob.Display();
 
     Employee obj6;
@@ -131,6 +138,7 @@ int main()
     // doubllylinklist ob6;
     fout<<"Name: "<<obj6.getName()<<" ID: "<<obj6.getId()<<" Department: "<<obj6.getDeparment()<<" Salary: "<<obj6.getSalary()<<" Bonus: "<<obj6.getBonus()<<" Age: "<<obj6.getAge()<<endl;
     ob.insert(obj6);
+    h1.insert(obj6);
     // ob.Display();
 
     Employee obj7;
@@ -147,6 +155,7 @@ int main()
     // doubllylinklist ob7;
     fout<<"Name: "<<obj7.getName()<<" ID: "<<obj7.getId()<<" Department: "<<obj7.getDeparment()<<" Salary: "<<obj7.getSalary()<<" Bonus: "<<obj7.getBonus()<<" Age: "<<obj7.getAge()<<endl;
     ob.insert(obj7);
+    h1.insert(obj7);
     // ob.Display();
 
     Employee obj8;
@@ -163,6 +172,7 @@ int main()
     // doubllylinklist ob8;
     fout<<"Name: "<<obj8.getName()<<" ID: "<<obj8.getId()<<" Department: "<<obj8.getDeparment()<<" Salary: "<<obj8.getSalary()<<" Bonus: "<<obj8.getBonus()<<" Age: "<<obj8.getAge()<<endl;
     ob.insert(obj8);
+    h1.insert(obj8);
     // ob.Display();
 
     Employee obj9;
@@ -179,6 +189,7 @@ int main()
     // doubllylinklist ob9;
     fout<<"Name: "<<obj9.getName()<<" ID: "<<obj9.getId()<<" Department: "<<obj9.getDeparment()<<" Salary: "<<obj9.getSalary()<<" Bonus: "<<obj9.getBonus()<<" Age: "<<obj9.getAge()<<endl;
     ob.insert(obj9);
+    h1.insert(obj9);
     // ob.Display();
 
     Employee obj10;
@@ -195,6 +206,7 @@ int main()
     // doubllylinklist ob10;
     fout<<"Name: "<<obj10.getName()<<" ID: "<<obj10.getId()<<" Department: "<<obj10.getDeparment()<<" Salary: "<<obj10.getSalary()<<" Bonus: "<<obj10.getBonus()<<" Age: "<<obj10.getAge()<<endl;
     ob.insert(obj10);
+    h1.insert(obj10);
     // ob.Display();
 
     Employee obj11;
@@ -211,6 +223,7 @@ int main()
     // doubllylinklist ob11;
     fout<<"Name: "<<obj11.getName()<<" ID: "<<obj11.getId()<<" Department: "<<obj11.getDeparment()<<" Salary: "<<obj11.getSalary()<<" Bonus: "<<obj11.getBonus()<<" Age: "<<obj11.getAge()<<endl;
     ob.insert(obj11);
+    h1.insert(obj11);
     // ob.Display();
 
     Employee obj12;
@@ -227,6 +240,7 @@ int main()
     // doubllylinklist ob12;
     fout<<"Name: "<<obj12.getName()<<" ID: "<<obj12.getId()<<" Department: "<<obj12.getDeparment()<<" Salary: "<<obj12.getSalary()<<" Bonus: "<<obj12.getBonus()<<" Age: "<<obj12.getAge()<<endl;
     ob.insert(obj12);
+    h1.insert(obj12);
     // ob.Display();
 
     Employee obj13;
@@ -243,6 +257,7 @@ int main()
     // doubllylinklist ob13;
     fout<<"Name: "<<obj13.getName()<<" ID: "<<obj13.getId()<<" Department: "<<obj13.getDeparment()<<" Salary: "<<obj13.getSalary()<<" Bonus: "<<obj13.getBonus()<<" Age: "<<obj13.getAge()<<endl;
     ob.insert(obj13);
+    h1.insert(obj13);
     // ob.Display();
     int choice = 0;
     Queue complain;		//to contain the complains
@@ -291,6 +306,7 @@ int main()
 //            doubllylinklist ob14;
 			fout<<"Name: "<<obj1.getName()<<" ID: "<<obj1.getId()<<" Department: "<<obj1.getDeparment()<<" Salary: "<<obj1.getSalary()<<" Bonus: "<<obj1.getBonus()<<" Age: "<<obj1.getAge()<<endl;
             ob.insert(obj1);
+            h1.insert(obj1);
             ob.Display();
             sleep(5);
             system("CLS");

@@ -15,12 +15,12 @@ public:
     HashTable();
     int hash(int);
     void insert(Employee);
-    Employee search(int );
+    Employee* search(int );
     void remove(int);
     void print(){//temporary
-        // for(int i=0;i<size;i++){
-            // cout<<table->arr[i].getId()<<" ";
-        // }
+        for(int i=0;i<size;i++){
+            table->arr[i].Display();
+         }
     }
     void remake();
 };
@@ -41,14 +41,15 @@ void HashTable::insert(Employee emp){
         remake();
     }
 }
-Employee HashTable::search(int reqID){
+Employee* HashTable::search(int reqID){
     int index=hash(reqID);
     NodeSingllyList* curr=table->arr[index].head;
     for(;curr!=NULL;curr=curr->next){
         if(curr->emp.getId()==reqID){
-            return curr->emp;
+            return &(curr->emp);
         }
     }
+    return NULL;
 }
 void HashTable::remove(int reqID){
     int index=hash(reqID);
