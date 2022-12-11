@@ -204,6 +204,13 @@ void SingllyList::remove(int id){
     if(head==NULL){
         return;
     }
+    if(curr->emp.getId()==id){
+        NodeSingllyList *temp=head->next;
+        NodeSingllyList* del=head;
+        head=temp;
+        delete del;
+        return;
+    }
     while(curr->next->emp.getId()!=id && curr->next!=NULL){
         curr=curr->next;
     }

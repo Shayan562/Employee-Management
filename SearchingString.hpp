@@ -6,7 +6,7 @@
 using namespace std;
 class string_search{
     public:
-    void Search (doubllylinklist &ob,string a)
+    string Search (doubllylinklist &ob,string a)
     {
         Stack s;
         string name;
@@ -47,8 +47,8 @@ class string_search{
                 cin>>choice;
                 if(choice==1)
                 {
-                    curr->obj.Display();
-                    return;
+                    // curr->obj.Display();
+                    return curr->obj.getName();
                 }
 
             }
@@ -60,7 +60,8 @@ class string_search{
  
      if(choice!=1)
     {
-        cout<<"Sorry! We Couldn't Find the Data you were Seacrching For"<<endl;
+        cout<<"Sorry! We Couldn't Find the Data you were Searching For"<<endl;
+        return " ";
     }
 }
 };

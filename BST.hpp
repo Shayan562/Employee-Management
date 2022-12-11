@@ -11,6 +11,7 @@ public:
         head=NULL;
         total=0;
     }
+    
     NodeBST<tree>* insert(NodeBST<tree>* node, Employee emp, tree data){   
         if(node==NULL){
             total++;
@@ -30,19 +31,19 @@ public:
         }
         return node;
     }
-    string search(string reqName){
-        if(head==NULL){
-            return NULL;
-        }
-        //add string match function
-    }
+    // string search(string reqName){
+    //     if(head==NULL){
+    //         return NULL;
+    //     }
+    //     //add string match function
+    // }
     NodeBST<tree>* search(NodeBST<tree>* node, tree req){
         if(node==NULL){
-            cout<<"Not found\n";
+            // cout<<"Not found\n";
             return NULL;
         }
         else if(req==node->data){
-            cout<<"Found\n";
+            // cout<<"Found\n";
             // inorder(node);
             return node;
         }
@@ -53,7 +54,7 @@ public:
             return search(node->right,req);
         }
         else{
-            cout<<"Not Found";
+            // cout<<"Not Found";
             return NULL;
         }
     }
@@ -164,28 +165,29 @@ public:
 
 // int main(){
 //     Employee a;
-//     a.setAge(30);
+//     a.setName("Shayan");
 //     Employee b;
-//     b.setAge(30);
-//     Employee c;
-//     c.setAge(25);
-//     Employee d;
-//     d.setAge(23);
-//     Employee e;
-//     e.setAge(24);
-//     BST<int> tree;
-//     tree.head=tree.insert(tree.head,a,a.getAge());
-//     tree.insert(tree.head, c, c.getAge());
-//     // tree.inorder(tree.head);
-//     cout<<"--------NEW INSERTION--------\n";
-//     tree.insert(tree.head, b, b.getAge());
-//     tree.insert(tree.head, d, d.getAge());
-//     tree.insert(tree.head, e, e.getAge());
-//     // tree.remove(tree.head, 30, 2);
+//     b.setName("Ali M");
+//     // Employee c;
+//     // c.setAge(25);
+//     // Employee d;
+//     // d.setAge(23);
+//     // Employee e;
+//     // e.setAge(24);
+//     BST<string> tree;
+//     tree.head=tree.insert(tree.head,a,a.getName());
+//     tree.insert(tree.head, b, b.getName());
 //     tree.inorder(tree.head);
+//     // cout<<"--------NEW INSERTION--------\n";
+//     // tree.insert(tree.head, b, b.getAge());
+//     // tree.insert(tree.head, d, d.getAge());
+//     // tree.insert(tree.head, e, e.getAge());
+//     // tree.remove(tree.head, 30, 2);
+//     // tree.inorder(tree.head);
 
-//     cout<<"Deleting Another\n\n";
+//     // cout<<"Deleting Another\n\n";
 //     // tree.remove(tree.head, 30, 1);
 //     // tree.inorder(tree.head);
+//     NodeBST<string> *n=tree.search(tree.head,"Ali");
 
 // }
