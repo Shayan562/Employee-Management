@@ -45,17 +45,17 @@ public:
         int n1 = (mid - l) + 1;
         int n2 = r - mid;
 
-        Array<Employee> a(n1);
-        Array<Employee> b(n2);
-        // Employee a[n1];
-        // Employee b[n2];
+        //Array<Employee> a(n1);
+        //Array<Employee> b(n2);
+         Employee a[n1];
+         Employee b[n2];
         for (int i = 0; i < n1; i++)
         {
-            a.arr[i] = arr[i + l];
+            a[i] = arr[i + l];
         }
         for (int i = 0; i < n2; i++)
         {
-            b.arr[i] = arr[mid + i + 1];
+            b[i] = arr[mid + i + 1];
         }
         int i = 0;
         int j = 0;
@@ -64,45 +64,45 @@ public:
         {
             if (choice == 2)
             {
-                if (a.arr[i].getSalary() >= b.arr[j].getSalary())
+                if (a[i].getSalary() >= b[j].getSalary())
                 {
-                    arr[k] = b.arr[j];
+                    arr[k] = b[j];
                     j++;
                     k++;
                 }
-                else if (a.arr[i].getSalary() <= b.arr[j].getSalary())
+                else if (a[i].getSalary() <= b[j].getSalary())
                 {
-                    arr[k] = a.arr[i];
+                    arr[k] = a[i];
                     i++;
                     k++;
                 }
             }
             else if (choice == 1)
             {
-                if (a.arr[i].getName() >= b.arr[j].getName())
+                if (a[i].getName() >= b[j].getName())
                 {
-                    arr[k] = b.arr[j];
+                    arr[k] = b[j];
                     j++;
                     k++;
                 }
-                else if (a.arr[i].getName() <= b.arr[j].getName())
+                else if (a[i].getName() <= b[j].getName())
                 {
-                    arr[k] = a.arr[i];
+                    arr[k] = a[i];
                     i++;
                     k++;
                 }
             }
             else
             {
-                if (a.arr[i].getAge() >= b.arr[j].getAge())
+                if (a[i].getAge() >= b[j].getAge())
                 {
-                    arr[k] = b.arr[j];
+                    arr[k] = b[j];
                     j++;
                     k++;
                 }
-                else if (a.arr[i].getAge() <= b.arr[j].getAge())
+                else if (a[i].getAge() <= b[j].getAge())
                 {
-                    arr[k] = a.arr[i];
+                    arr[k] = a[i];
                     i++;
                     k++;
                 }
@@ -110,13 +110,13 @@ public:
         }
         while (n1 > i)
         {
-            arr[k] = a.arr[i];
+            arr[k] = a[i];
             k++;
             i++;
         }
         while (n2 > j)
         {
-            arr[k] = b.arr[j];
+            arr[k] = b[j];
             k++;
             j++;
         }
