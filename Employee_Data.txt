@@ -1,0 +1,28 @@
+Name: Muhammad Rehan Khan ID: 3172 Department: Cheif Executive Officer Salary: 10000000 Bonus: 2.1 Age: 24
+Name: Azaan Nabi Khan ID: 3208 Department: Cheif Technology Officer Salary: 2000000 Bonus: 1.5 Age: 20
+Name: Syed Muhammad Shayan Hussain ID: 10 Department: Managing Director Salary: 3000000 Bonus: 2.3 Age: 20
+Name: Oliviia Robin ID: 13 Department: Head of Operations Salary: 150000 Bonus: 1 Age: 29
+Name: Ali Ahmed ID: 20 Department: Project Manager Salary: 200000 Bonus: 1.5 Age: 28
+Name: Matt Kench ID: 23 Department: Project Manager Salary: 300000 Bonus: 1.5 Age: 31
+Name: Muhammad Asad ID: 26 Department: Project Manager Salary: 400000 Bonus: 1.5 Age: 27
+Name: Khubaib Lodhi ID: 29 Department: Cheif Financial Officer Salary: 500000 Bonus: 1.5 Age: 33
+Name: Syed Sana Hussain ID: 40 Department: Finance Director Salary: 200000 Bonus: 1.5 Age: 37
+Name: Taha Khan ID: 43 Department: Finance Manager Salary: 250000 Bonus: 1.5 Age: 24
+Name: Ramla Nawaz ID: 46 Department: Human Resource Director Salary: 350000 Bonus: 1.5 Age: 36
+Name: Maria Asrar ID: 49 Department: Human Resource Manager Salary: 250000 Bonus: 1.5 Age: 38
+Name: Mustansir Molwani ID: 52 Department: Human Resource Generalist Salary: 550000 Bonus: 1.5 Age: 23
+Name: Fahad Farooqi ID: 55 Department: Director of Recuriting Salary: 850000 Bonus: 1.5 Age: 22
+Name: Muhammad Rehan Khan ID: 3172 Department: Cheif Executive Officer Salary: 10000000 Bonus: 2.1 Age: 24
+Name: Azaan Nabi Khan ID: 3208 Department: Cheif Technology Officer Salary: 2000000 Bonus: 1.5 Age: 20
+Name: Syed Muhammad Shayan Hussain ID: 10 Department: Managing Director Salary: 3000000 Bonus: 2.3 Age: 20
+Name: Oliviia Robin ID: 13 Department: Head of Operations Salary: 150000 Bonus: 1 Age: 29
+Name: Ali Ahmed ID: 20 Department: Project Manager Salary: 200000 Bonus: 1.5 Age: 28
+Name: Matt Kench ID: 23 Department: Project Manager Salary: 300000 Bonus: 1.5 Age: 31
+Name: Muhammad Asad ID: 26 Department: Project Manager Salary: 400000 Bonus: 1.5 Age: 27
+Name: Khubaib Lodhi ID: 29 Department: Cheif Financial Officer Salary: 500000 Bonus: 1.5 Age: 33
+Name: Syed Sana Hussain ID: 40 Department: Finance Director Salary: 200000 Bonus: 1.5 Age: 37
+Name: Taha Khan ID: 43 Department: Finance Manager Salary: 250000 Bonus: 1.5 Age: 24
+Name: Ramla Nawaz ID: 46 Department: Human Resource Director Salary: 350000 Bonus: 1.5 Age: 36
+Name: Maria Asrar ID: 49 Department: Human Resource Manager Salary: 250000 Bonus: 1.5 Age: 38
+Name: Mustansir Molwani ID: 52 Department: Human Resource Generalist Salary: 550000 Bonus: 1.5 Age: 23
+Name: Fahad Farooqi ID: 55 Department: Director of Recuriting Salary: 850000 Bonus: 1.5 Age: 22

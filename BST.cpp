@@ -173,9 +173,4 @@ int main(){
     tree.remove(tree.head, 30, 1);
     tree.inorder(tree.head);
 
-    // NodeBST<int> *val;
-    // val=tree.search(tree.head, 30);
-    // if(val){
-    //     cout<<val->numOfEmployees;
-    // }
 }
