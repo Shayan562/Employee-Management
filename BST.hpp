@@ -21,7 +21,6 @@ public:
         else if(data==node->data){
             total++;
             node->insert(emp);
-            return NULL;
         }
         else if(data < node->data){
             node->left=insert(node->left, emp, data);

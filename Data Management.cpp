@@ -131,8 +131,8 @@ void DataManagement::createDataStructures(){
         }
     }
     cout<<treeAge.total<<"TREE\n";
-    NodeBST<int> *sal=treeSalary.search(treeSalary.head,200000);
-    // treeAge.inorder(treeAge.head);
+    // NodeBST<int> *sal=treeSalary.search(treeSalary.head,200000);
+    treeAge.inorder(treeAge.head);
     // treeSalary.inorder(treeSalary.head);
 }
 void DataManagement::writeToFile(){
