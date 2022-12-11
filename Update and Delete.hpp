@@ -6,10 +6,10 @@
 #include "Linked List.hpp"
 #include "Hashing Table.hpp"
 #include "Dynamic Queue.hpp"
-#include<stdlib.h>
-#include <Windows.h>
+//#include<stdlib.h>
+//#include <Windows.h>
 //#include<unistd.h>
-#include <cstdlib>
+//#include <cstdlib>
 #include<fstream>
 
 void Delete_all(doubllylinklist &list,HashTable &table,int ID){	//pass an employee ID to delete
