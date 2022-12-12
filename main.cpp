@@ -14,7 +14,7 @@ using namespace std;
 
 int main()
 {
-	system("Color 8F");
+	system("Color A0");
     Budget budget;
     cout << "\t\t\t\t\t************ 3 Bros INC ************" << endl
          << endl;
