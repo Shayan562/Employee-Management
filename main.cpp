@@ -8,12 +8,14 @@
 // #include "Dynamic Queue.hpp"
 // #include<fstream>
 // #include "Update and Delete.hpp"
+#include "budget.hpp"
 #include "Data Management.hpp"
 using namespace std;
 
 int main()
 {
 	system("Color 8F");
+    Budget budget;
     cout << "\t\t\t\t\t************ 3 Bros INC ************" << endl
          << endl;
     DataManagement application;
@@ -31,7 +33,9 @@ int main()
         }
         cout << "\n\tPress [1] to insert a new employee\n\tPress [2] to delete an employee\n"<<
         "\tPress [3] to edit an employee\n\tPress [4] to search a employee\n\tPress [5] for Sorting Data\n"<<
-        "\tPress [6] to display\n\tPress [7] to enter a complain\n\tPress [8] to view complains\n\tPress [-1] to exit" << endl;
+        "\tPress [6] to display\n\tPress [7] to enter a complain\n\tPress [8] to view complains\n"<<
+        "\tPress [9] to insert budget\n\tPress [10] to remove budget\n\tPress [11] to display budget\n"
+        "\tPress [-1] to exit" << endl;
         cin >> choice;
         system("cls");
         switch (choice)
@@ -125,6 +129,36 @@ int main()
             complain.Dispaly_complains();
             counter++;
             break;
+        
+        case 9:
+        {
+            int year;
+            float budgetValue;
+            system("CLS");
+            cout<<"Enter the year: ";
+            cin>>year;
+            cout<<"Enter the budget: ";
+            cin>>budgetValue;
+            budget.insert(year,budgetValue);
+            break;
+            }
+        case 10:
+        {
+            int year;
+            system("CLS");
+            cout<<"Enter the year: ";
+            cin>>year;
+            budget.remove(year);
+            break;
+        }
+        case 11:
+        {
+            system("CLS");
+            budget.Display();
+            break;
+        }
+        
+        
         }
     } while (choice != -1);
 }

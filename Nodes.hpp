@@ -71,4 +71,15 @@ public:
         this->emp=emp;
     }
 };
+class NodeBudget{
+public:
+    int year;
+    float budget;
+    NodeBudget* next;
+    NodeBudget(int year, float budget){
+        next=NULL;
+        this->year=year;
+        this->budget=budget;
+    }
+};
 

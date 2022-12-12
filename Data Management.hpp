@@ -18,7 +18,7 @@ public:
     HashTable table;
     BST<int> *treeAge;
     BST<int> *treeSalary;
-    BST<string> *treeDepartment;
+    // BST<string> *treeDepartment;
     BST<string> *treeNames;
 
 
@@ -99,7 +99,7 @@ void DataManagement::readFromFile(){
 void DataManagement::createDataStructures(){
     NodeSingllyList *curr;
     treeAge=new BST<int>;
-    treeDepartment=new BST<string>;
+    // treeDepartment=new BST<string>;
     treeNames=new BST<string>;
     treeSalary=new BST<int>;
     bool firstInsertion=true;
@@ -112,7 +112,7 @@ void DataManagement::createDataStructures(){
                 treeAge->head=treeAge->insert(treeAge->head,emp,emp.getAge());
                 treeSalary->head=treeSalary->insert(treeSalary->head,emp,emp.getSalary());
                 treeNames->head=treeNames->insert(treeNames->head,emp,emp.getName());
-                treeDepartment->head=treeDepartment->insert(treeDepartment->head,emp,emp.getDeparment());
+                // treeDepartment->head=treeDepartment->insert(treeDepartment->head,emp,emp.getDeparment());
                 firstInsertion=false;
                 curr=curr->next;
                 continue;
@@ -120,7 +120,7 @@ void DataManagement::createDataStructures(){
             treeAge->insert(treeAge->head,emp,emp.getAge());
             treeSalary->insert(treeSalary->head,emp,emp.getSalary());
             treeNames->insert(treeNames->head,emp,emp.getName());
-            treeDepartment->insert(treeDepartment->head,emp,emp.getDeparment());
+            // treeDepartment->insert(treeDepartment->head,emp,emp.getDeparment());
             curr=curr->next;
         }
     }
@@ -236,7 +236,7 @@ void DataManagement::search(){
     while(true){
 
     system("CLS");
-    cout << "\n\tPress [1] to search by ID\n\tPress [2] to search by Name\n\tPress [3] to search by Age\n\tPress [4] to search by Salary\n\tPress [5] to search by Department\n\tPress [6] to go back\n";
+    cout << "\n\tPress [1] to search by ID\n\tPress [2] to search by Name\n\tPress [3] to search by Age\n\tPress [4] to search by Salary\n\tPress [5] to go back\n";
     int choice;
     cin>>choice;
     
@@ -340,29 +340,7 @@ void DataManagement::search(){
         cin>>c;
         break;
     }
-    
-    // case 5:{
-    //     string department;
-    //     cout<<"Enter the Department: ";
-    //     fflush(stdin);
-    //     getline(cin,department);
-    //     cin>>department;
-    //     NodeBST<string>* functionObj=treeDepartment.search(treeDepartment.head, department);
-    //     if(functionObj==NULL){
-    //         cout<<"Not Found\n";
-    //     }
-    //     else{
-    //         NodeSingllyList *curr=functionObj->list.head;
-    //         while(curr!=NULL){
-    //             curr->emp.Display();
-    //             curr=curr->next;
-    //             cout<<endl;
-    //         }
-    //     }
-            // cout<<"\nEnter 1 to continue: ";
-            // cin>>c;
-    // }
-    case 6:
+    case 5:
         return;
     default:
         break;
